@@ -3,7 +3,7 @@
 HAMILTON-JACOBI PDE PERFECT SOLVER & RESEARCH SUITE (SCOPUS Q1 TOP 1% WORLD CLASS)
 Author: Samuel Hasiholan Omega Purba, S. Tr. T.
 Prodi Teknik Robotika dan Kecerdasan Buatan, Jurusan Teknik Elektro, Politeknik Negeri Batam
-Founder: BeruangLaut.ID
+Founder : BeruangLaut.ID | Email : spurba563s@gmail.com
 ====================================================================================================
 """
 
@@ -175,7 +175,7 @@ class MainWindow(QMainWindow):
         title_label.setFont(QFont("Arial", 16, QFont.Weight.Bold))
         title_label.setStyleSheet("color: #38bdf8;")
         
-        subtitle_label = QLabel("Author: Samuel Hasiholan Omega Purba, S. Tr. T. | Politeknik Negeri Batam (BeruangLaut.ID)")
+        subtitle_label = QLabel("Author: Samuel Hasiholan Omega Purba, S. Tr. T. | Politeknik Negeri Batam (BeruangLaut.ID | spurba563s@gmail.com)")
         subtitle_label.setStyleSheet("color: #94a3b8; font-style: italic;")
         
         header_vbox = QVBoxLayout()
@@ -454,17 +454,17 @@ class MainWindow(QMainWindow):
 
         <p><b>2. Lax-Oleinik Variational Representation & Legendre Duality:</b></p>
         <p>For convex Hamiltonians H(p), the Lagrangian L(v) is defined via Fenchel-Legendre transform:</p>
-        <pre style='color:#fde047;'> L(v) = sup_{p ∈ ℝ^d} { p · v - H(p) } </pre>
+        <pre style='color:#fde047;'> L(v) = sup_{p ∈ ℝ^d} [ p · v - H(p) ] </pre>
         <p>The unique viscosity solution S(x,t) is given by the infimal convolution:</p>
-        <pre style='color:#f472b6;'> S(x, t) = inf_{y ∈ ℝ^d} { S_0(y) + t · L((x - y) / t) } </pre>
+        <pre style='color:#f472b6;'> S(x, t) = inf_{y ∈ ℝ^d} [ S_0(y) + t · L((x - y) / t) ] </pre>
 
         <p><b>3. Stochastic Hamilton-Jacobi-Bellman (HJB) for Autonomous Robotics:</b></p>
         <p>Under system dynamics dx = f(x, u) dt + σ dW_t, the Value Function V(x,t) satisfies:</p>
-        <pre style='color:#38bdf8;'> ∂V/∂t + ½ σ² ΔV + min_{u ∈ 𝒰} { L(x, u) + ∇V · f(x, u) } = 0 </pre>
+        <pre style='color:#38bdf8;'> ∂V/∂t + ½ σ² ΔV + min_{u ∈ 𝒰} [ L(x, u) + ∇V · f(x, u) ] = 0 </pre>
         <p>The continuous optimal control policy is given by <i>u*(x,t) = -R⁻¹ Bᵀ ∇V(x,t)</i>.</p>
 
         <hr style='border: 1px solid #334155;'>
-        <p style='color:#94a3b8;'><i>Authored by Samuel Hasiholan Omega Purba, S. Tr. T. — Teknik Robotika dan Kecerdasan Buatan, Politeknik Negeri Batam.</i></p>
+        <p style='color:#94a3b8;'><i>Authored by Samuel Hasiholan Omega Purba, S. Tr. T. — Founder : BeruangLaut.ID | Email : spurba563s@gmail.com</i></p>
         """)
         layout.addWidget(txt)
 
