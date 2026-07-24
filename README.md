@@ -130,7 +130,7 @@ graph TD
 
 #### **Theorem 3 (Stochastic Hamilton-Jacobi-Bellman Formulation for Robotics)**
 
-> **Theorem 3.** *Under stochastic Brownian drift $dx_t = f(x_t, u_t) \, dt + \sigma \, dW_t$, the optimal cost-to-go value function $V : \mathbb{R}^d \times [0, T] \to \mathbb{R}$ satisfies the 2nd-order non-linear PDE:*
+> **Theorem 3.** *Under stochastic Brownian drift dynamics $d x_t = f(x_t, u_t) \, dt + \sigma \, dW_t$ with state trajectory $x_t \in \mathbb{R}^d$, control $u_t \in \mathcal{U}$, standard Wiener process $W_t \in \mathbb{R}^d$, and noise volatility $\sigma > 0$, the optimal cost-to-go value function $V : \mathbb{R}^d \times [0, T] \to \mathbb{R}$ satisfies the 2nd-order non-linear PDE:*
 > 
 > $$\frac{\partial V(x, t)}{\partial t} + \frac{1}{2} \sigma^2 \Delta V(x, t) + \min_{u \in \mathcal{U}} \left[ L(x, u) + \nabla V(x, t) \cdot f(x, u) \right] = 0 \tag{3}$$
 > 
@@ -143,7 +143,7 @@ graph TD
 
 #### **Theorem 4 (Closed-Loop Optimal Feedback Control Policy)**
 
-> **Theorem 4.** *For control-affine dynamic systems $f(x,u) = f_0(x) + \mathbf{B}u$ with quadratic control cost $\frac{1}{2} u^T \mathbf{R} u$, the analytical feedback policy $u^* : \mathbb{R}^d \times [0, T] \to \mathcal{U}$ is given by:*
+> **Theorem 4.** *For control-affine dynamic systems $f(x,u) = f_0(x) + \mathbf{B} u$ with uncontrolled drift field $f_0 : \mathbb{R}^d \to \mathbb{R}^d$, control matrix $\mathbf{B} \in \mathbb{R}^{d \times m}$, and quadratic control cost $\frac{1}{2} u^T \mathbf{R} u$, the analytical feedback policy $u^* : \mathbb{R}^d \times [0, T] \to \mathcal{U}$ is given by:*
 > 
 > $$u^*(x, t) = -\mathbf{R}^{-1} \mathbf{B}^T \nabla V(x, t) \in \mathcal{U} \tag{4}$$
 > 
