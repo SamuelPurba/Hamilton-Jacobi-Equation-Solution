@@ -44,7 +44,7 @@
 The non-linear first-order Hamilton-Jacobi Partial Differential Equation serves as a foundational pinnacle bridging classical Hamiltonian dynamics, quantum field theory, optimal control theory, and geometric optics. As formulated in the research vision of Samuel Hasiholan Omega Purba, S. Tr. T., the action field $S(q, t)$ governs the phase space geometry of physical trajectories and autonomous robotic systems under optimal control policies.
 
 ### Mathematical Variable & Operator Specifications (IEEE Notation Standard):
-* **$S : \mathbb{R}^d \times [0, T] \to \mathbb{R}$**: Hamilton's Principal Action scalar field defined on the continuous configuration-time domain manifold $C(\mathbb{R}^d \times [0, T])$.
+* **$S : \mathbb{R}^d \times [0, T] \to \mathbb{R}$**: Hamilton's Principal Action scalar field defined on the continuous domain $\mathbb{R}^d \times [0, T]$.
 * **$q \in \mathbb{R}^d$**: Generalized configuration coordinate state vector on the base manifold.
 * **$p = \nabla_q S = \frac{\partial S}{\partial q} \in T_q^* \mathbb{R}^d$**: Generalized canonical momentum covector field (differential 1-form $p = dS$) defined on the cotangent fiber space $T_q^* \mathbb{R}^d$.
 * **$S_0 : \mathbb{R}^d \to \mathbb{R}$**: Initial action condition defined on the Cauchy boundary manifold at $t = 0$.
@@ -57,7 +57,7 @@ The non-linear first-order Hamilton-Jacobi Partial Differential Equation serves 
 
 | Analysis Component | Classical Formulation | Mathematical Singularity / Anomaly | IEEE Scopus Q1 Corrected Formulation | Rigor & Precision Status |
 | :--- | :--- | :--- | :--- | :---: |
-| **Solution Character** | Classical $C^1(\mathbb{R}^d \times [0, T])$ Solution | **Intersecting Characteristics**: Causes gradient shocks in $p = \nabla S \in T_x^* \mathbb{R}^d$. | **Crandall-Lions Viscosity Solution**: $S \in C(\mathbb{R}^d \times [0, T])$ test function sub/super-solutions. | 100% Verified Unique |
+| **Solution Character** | Classical $C^1$ Solution | **Intersecting Characteristics**: Causes gradient shocks in $p = \nabla S \in T_x^* \mathbb{R}^d$. | **Crandall-Lions Viscosity Solution**: Continuous test function sub/super-solutions on $\mathbb{R}^d \times [0, T]$. | 100% Verified Unique |
 | **Variational Convolution** | Direct Line Integration | **Multivalued Action**: $S(x,t)$ becomes multivalued at caustics. | **Lax-Oleinik Infimal Convolution**: $S(x,t) = \inf_{y} \left[ S_0(y) + t \cdot L\left(\frac{x-y}{t}\right) \right]$. | Exact Precision ($<10^{-15}$) |
 | **Robotic Optimal Control** | Deterministic Euler-Lagrange | **Noise Sensitivity**: Fails under environmental noise perturbations. | **Stochastic HJB PDE**: $\frac{\partial V}{\partial t} + \frac{1}{2}\sigma^2 \Delta V + \min_u \left[ L + \nabla V \cdot f \right] = 0$. | Stable Under Noise ($\sigma = 0.08$) |
 | **Control Policy Vector** | Open-Loop Trajectory | **No Real-Time Response**: Lacks full state-space feedback. | **Closed-Loop Feedback Policy**: $u^*(x,t) = -\mathbf{R}^{-1} \mathbf{B}^T \nabla V(x,t) \in \mathcal{U}$. | Sub-ms Response ($<0.01\text{ ms}$) |
@@ -101,7 +101,7 @@ graph TD
 
 #### 1️⃣ **Theorem 1 (Crandall-Lions Viscosity Solution Framework)**
 
-> **Theorem 1.** *A bounded continuous function $S \in C(\mathbb{R}^d \times [0, T])$ is defined as a **Viscosity Solution** of the Hamilton-Jacobi equation if for every test function $\phi, \psi \in C^1(\mathbb{R}^d \times (0, T))$:*
+> **Theorem 1.** *A bounded continuous function $S : \mathbb{R}^d \times [0, T] \to \mathbb{R}$ is defined as a **Viscosity Solution** of the Hamilton-Jacobi equation if for every test function $\phi, \psi \in C^1(\mathbb{R}^d \times (0, T))$:*
 > 
 > **(a) Subsolution Condition:** *If $S - \phi$ has a local maximum at $(x_0, t_0) \in \mathbb{R}^d \times (0, T)$, then:*
 > $$\frac{\partial \phi}{\partial t}(x_0, t_0) + H\left(x_0, \nabla \phi(x_0, t_0)\right) \le 0$$
@@ -109,7 +109,7 @@ graph TD
 > **(b) Supersolution Condition:** *If $S - \psi$ has a local minimum at $(x_0, t_0) \in \mathbb{R}^d \times (0, T)$, then:*
 > $$\frac{\partial \psi}{\partial t}(x_0, t_0) + H\left(x_0, \nabla \psi(x_0, t_0)\right) \ge 0$$
 > 
-> ***Proof.*** By invoking the sub-differential $\partial^- S(x_0, t_0)$ and super-differential $\partial^+ S(x_0, t_0)$ at gradient kinks, global uniqueness and existence of weak solutions in $C(\mathbb{R}^d \times [0, T])$ are guaranteed. $\quad \blacksquare$
+> ***Proof.*** By invoking the sub-differential $\partial^- S(x_0, t_0)$ and super-differential $\partial^+ S(x_0, t_0)$ at gradient kinks, global uniqueness and existence of weak solutions on $\mathbb{R}^d \times [0, T]$ are guaranteed. $\quad \blacksquare$
 
 </td>
 </tr>
@@ -118,7 +118,7 @@ graph TD
 
 #### 2️⃣ **Theorem 2 (Lax-Oleinik Variational Representation & Legendre Duality)**
 
-> **Theorem 2.** *For a convex Hamiltonian operator $H : T^* \mathbb{R}^d \to \mathbb{R}$, the Fenchel-Legendre dual Lagrangian operator $L : T \mathbb{R}^d \to \mathbb{R}$ is defined as $L(v) = \sup_{p \in \mathbb{R}^d} \left[ p \cdot v - H(p) \right]$. The unique viscosity solution $S(x, t) \in C(\mathbb{R}^d \times [0, T])$ is given by the infimal convolution:*
+> **Theorem 2.** *For a convex Hamiltonian operator $H : T^* \mathbb{R}^d \to \mathbb{R}$, the Fenchel-Legendre dual Lagrangian operator $L : T \mathbb{R}^d \to \mathbb{R}$ is defined as $L(v) = \sup_{p \in \mathbb{R}^d} \left[ p \cdot v - H(p) \right]$. The unique viscosity solution $S(x, t)$ on $\mathbb{R}^d \times [0, T]$ is given by the infimal convolution:*
 > 
 > $$S(x, t) = \inf_{y \in \mathbb{R}^d} \left[ S_0(y) + t \cdot L\left(\frac{x - y}{t}\right) \right] \tag{2}$$
 > 
