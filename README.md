@@ -13,7 +13,7 @@
 </h3>
 
 <p align="center">
-  <strong>Samuel Hasiholan Omega Purba, S. Tr. T.</strong>, <em>Graduate Researcher</em><br>
+  <strong>Samuel Hasiholan Omega Purba, S. Tr. T.</strong>, <em>Graduate Researcher & Founder</em><br>
   Program Studi Teknik Robotika dan Kecerdasan Buatan (A.I), Jurusan Teknik Elektro<br>
   <strong>Politeknik Negeri Batam</strong>, Batam 29461, Riau Islands, Indonesia<br>
   Founder : <strong>BeruangLaut.ID</strong> | Email : <code>spurba563s@gmail.com</code>
@@ -33,7 +33,7 @@
 
 ## 📜 ABSTRACT
 
-> ***Abstract*—This research monograph and open-source computational software suite present a mathematical formalization, analytical calculus audit, and high-performance interactive software suite for solving the Hamilton-Jacobi Partial Differential Equation (HJ-PDE). Non-linear first-order PDEs governed by $\frac{\partial S}{\partial t} + H\left(q, \frac{\partial S}{\partial q}, t\right) = 0$ inherently develop gradient discontinuities (shocks and kinks) due to intersecting characteristic trajectories in phase space. Under the IEEE academic publication standard and Scopus Q1 benchmark, we establish the Crandall-Lions Viscosity Solution framework, Fenchel-Legendre duality, Lax-Oleinik infimal convolution, Quantum Hamilton-Jacobi Bohmian Mechanics, and Stochastic Hamilton-Jacobi-Bellman (HJB) continuous-time dynamic programming for autonomous mobile robotics. The implemented software suite demonstrates $100\%$ computational precision with sub-millisecond execution time ($<0.01\text{ ms}$) leveraging a 2D Fast Sweeping Viscosity Solver, 4th-Order Symplectic Runge-Kutta phase space ray tracing, and a 0% error daily automated CI/CD validation suite.**
+> ***Abstract*—This research monograph and open-source computational software suite, conceptualized and authored by Samuel Hasiholan Omega Purba, S. Tr. T., present a unified mathematical formalization, analytical calculus audit, and high-performance interactive software suite for solving the non-linear first-order Hamilton-Jacobi Partial Differential Equation (HJ-PDE). Governed by $\frac{\partial S}{\partial t} + H\left(q, \frac{\partial S}{\partial q}, t\right) = 0$, Hamilton-Jacobi equations naturally develop gradient discontinuities (shocks, kinks, and caustics) due to intersecting characteristic trajectories in phase space. Formulated under the IEEE academic publication standard and Scopus Q1 benchmark, this work bridges the Crandall-Lions Viscosity Solution framework, Fenchel-Legendre duality, Lax-Oleinik infimal convolution, Quantum Hamilton-Jacobi Bohmian Mechanics, and Stochastic Hamilton-Jacobi-Bellman (HJB) continuous-time dynamic programming for autonomous mobile robotics. The implemented software engine demonstrates $100\%$ computational precision with sub-millisecond execution time ($<0.01\text{ ms}$) leveraging a 2D Fast Sweeping Viscosity Solver, 4th-Order Symplectic Runge-Kutta phase space ray tracing, and a 0% error daily automated CI/CD self-healing validation suite.**
 >
 > ***Index Terms*—Hamilton-Jacobi PDE, Viscosity Solutions, Lax-Oleinik Formula, Stochastic Hamilton-Jacobi-Bellman (HJB), Autonomous Robotics, Fast Sweeping Method, IEEE Transactions.**
 
@@ -41,7 +41,7 @@
 
 ## I. INTRODUCTION & THEORETICAL FORMULATION
 
-The non-linear first-order Hamilton-Jacobi Partial Differential Equation serves as a foundational pinnacle bridging classical Hamiltonian dynamics, quantum field theory, optimal control theory, and geometric optics.
+The non-linear first-order Hamilton-Jacobi Partial Differential Equation serves as a foundational pinnacle bridging classical Hamiltonian dynamics, quantum field theory, optimal control theory, and geometric optics. As formulated in the research vision of Samuel Hasiholan Omega Purba, S. Tr. T., the action field $S(q, t)$ governs the phase space geometry of physical trajectories and autonomous robotic systems under optimal control policies.
 
 ### Mathematical Variable & Operator Specifications (IEEE Notation Standard):
 * **$S : \mathbb{R}^d \times [0, T] \to \mathbb{R}$**: Hamilton's Principal Action scalar field defined on the continuous configuration-time domain manifold $C(\mathbb{R}^d \times [0, T])$.
