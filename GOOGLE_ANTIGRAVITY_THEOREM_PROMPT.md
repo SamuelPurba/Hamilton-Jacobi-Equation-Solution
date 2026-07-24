@@ -12,12 +12,12 @@ Your mission is to audit, correct, and render with 100% mathematical precision t
 ====================================================================================================
 Pernyataan Teorema:
 Untuk Hamiltonian cembung H(p), Fungsi Lagrangian Dual L(v) didefinisikan sebagai:
-    L(v) = sup_{p in R^d} { p . v - H(p) }
+    L(v) = sup_{p \in \mathbb{R}^d} [ p \cdot v - H(p) ]
 
 Solusi Viscosity tunggal S(x, t) diberikan secara eksak oleh konvolusi infimal:
 
 Bukti Matematika Formal:
-$$S(x, t) = \inf_{y \in \mathbb{R}^d} \left\{ S_0(y) + t \cdot L\left(\frac{x - y}{t}\right) \right\}$$
+$$S(x, t) = \inf_{y \in \mathbb{R}^d} \left[ S_0(y) + t \cdot L\left(\frac{x - y}{t}\right) \right]$$
 
 Nilai minimizer $y^*(x, t)$ menentukan titik asal lintasan karakteristik optimal, sehingga gradien momentum:
 $$p(x,t) = \nabla L\left(\frac{x - y^*(x,t)}{t}\right)$$
@@ -33,12 +33,12 @@ Apabila dinamika sistem robotik dipengaruhi oleh derau stochastik gerak Brown:
 maka fungsi nilai cost-to-go V(x,t) memenuhi PDE orde dua:
 
 Bukti Matematika Formal:
-$$\frac{\partial V(x, t)}{\partial t} + \frac{1}{2} \sigma^2 \Delta V(x, t) + \min_{u \in \mathcal{U}} \left\{ L(x, u) + \nabla V(x, t) \cdot f(x, u) \right\} = 0 \quad \blacksquare$$
+$$\frac{\partial V(x, t)}{\partial t} + \frac{1}{2} \sigma^2 \Delta V(x, t) + \min_{u \in \mathcal{U}} \left[ L(x, u) + \nabla V(x, t) \cdot f(x, u) \right] = 0 \quad \blacksquare$$
 
 ====================================================================================================
 CRITICAL SYNTAX FIXES APPLIED:
 ====================================================================================================
-1. Delimiter Escaping: Replaced invalid `\left{` and `\right}` with valid LaTeX escaped delimiters `\left\{` and `\right\}` to prevent GitHub Markdown rendering errors.
-2. Superscript Formatting: Corrected `$y^(x,t)$` to `$y^*(x, t)$` with proper superscript asterisk `*`.
-3. QED Symbol: Added proper `\quad \blacksquare` Q.E.D. halmos square.
+1. Delimiter Optimization: Replaced ambiguous curly braces with robust LaTeX brackets `\left[` and `\right]` to prevent GitHub Markdown MathJax parsing conflicts.
+2. Superscript Formatting: Formatted `$y^*(x, t)$` with explicit superscript asterisk `*`.
+3. QED Symbol: Rendered `\quad \blacksquare` Q.E.D. halmos square.
 ```

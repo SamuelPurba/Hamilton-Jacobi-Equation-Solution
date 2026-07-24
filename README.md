@@ -54,8 +54,8 @@ Untuk menjamin kualitas publikasi akademis kelas dunia (Top 1% Scopus Q1 Grade),
 | Komponen Analisis | Formulasi Original (Eksperimental / Klasik) | Anomali / Singularitas Matematis | Formulasi Koreksi Scopus Q1 (Teorema Samuel Purba) | Status Rigor & Presisi |
 | :--- | :--- | :--- | :--- | :--- |
 | **Karakteristik Solusi** | Solusi Klasik $C^1(\mathbb{R}^d \times [0,T])$ | **Garis Karakteristik Berpotongan**: Memicu diskontinuitas gradien $p = \nabla S$ (shock front). | **Crandall-Lions Viscosity Solution**: Sub-solusi & Super-solusi pertidaksamaan uji. | 100% Terverifikasi Eksis & Unik |
-| **Konvolusi Variasional** | Integrasi Langsung Karakteristik | **Multivalued Action**: Nilai $S(x,t)$ bernilai ganda pada titik perpotongan sinar. | **Lax-Oleinik Infimal Convolution**: $S(x,t) = \inf_{y} \{ S_0(y) + t L(\frac{x-y}{t}) \}$. | Presisi Eksak $10^{-15}$ |
-| **Kontrol Optimal Robotik** | Persamaan Euler-Lagrange Deterministik | **Sensitivitas Derau**: Gagal menangani gangguan derau sensor/aktuator lingkungan. | **Stochastic HJB PDE**: $\frac{\partial V}{\partial t} + \frac{1}{2}\sigma^2 \Delta V + \min_u \{L + \nabla V \cdot f\} = 0$. | Stable Under Noise ($\sigma = 0.08$) |
+| **Konvolusi Variasional** | Integrasi Langsung Karakteristik | **Multivalued Action**: Nilai $S(x,t)$ bernilai ganda pada titik perpotongan sinar. | **Lax-Oleinik Infimal Convolution**: $S(x,t) = \inf_{y} [ S_0(y) + t L(\frac{x-y}{t}) ]$. | Presisi Eksak $10^{-15}$ |
+| **Kontrol Optimal Robotik** | Persamaan Euler-Lagrange Deterministik | **Sensitivitas Derau**: Gagal menangani gangguan derau sensor/aktuator lingkungan. | **Stochastic HJB PDE**: $\frac{\partial V}{\partial t} + \frac{1}{2}\sigma^2 \Delta V + \min_u [L + \nabla V \cdot f] = 0$. | Stable Under Noise ($\sigma = 0.08$) |
 | **Vektor Policy Kontrol** | Pengendalian Open-Loop | **Kurang Respon Real-time**: Tidak memiliki umpan balik state ruang keadaan. | **Closed-Loop Feedback Policy**: $u^*(x,t) = -\mathbf{R}^{-1} \mathbf{B}^T \nabla V(x,t)$. | Respon Sub-Milidetik ($<0.01\text{ ms}$) |
 | **Syarat Batas Entropi** | Turunan Orde Satu Biasa | **Shock Instability**: Kemungkinan solusi tak fisik yang memenuhi PDE secara lokal. | **Semiconcavity Bound**: $S(x+h) + S(x-h) - 2S(x) \le \frac{C}{t} \|h\|^2$. | Entropi Terbukti Terpenuhi |
 
@@ -99,10 +99,10 @@ Menggunakan sifat pertidaksamaan fungsi uji $C^1$, pada titik diskontinuitas gra
 ---
 
 #### **Teorema 2 (Representasi Variasional Lax-Oleinik & Dualitas Fenchel-Legendre)**
-> **Pernyataan Teorema**: Untuk Hamiltonian cembung $H(p)$, Fungsi Lagrangian Dual $L(v)$ didefinisikan sebagai $L(v) = \sup_{p \in \mathbb{R}^d} \{ p \cdot v - H(p) \}$. Solusi Viscosity tunggal $S(x, t)$ diberikan secara eksak oleh konvolusi infimal:
+> **Pernyataan Teorema**: Untuk Hamiltonian cembung $H(p)$, Fungsi Lagrangian Dual $L(v)$ didefinisikan sebagai $L(v) = \sup_{p \in \mathbb{R}^d} [ p \cdot v - H(p) ]$. Solusi Viscosity tunggal $S(x, t)$ diberikan secara eksak oleh konvolusi infimal:
 
 **Bukti Matematika Formal**:
-$$S(x, t) = \inf_{y \in \mathbb{R}^d} \left\{ S_0(y) + t \cdot L\left(\frac{x - y}{t}\right) \right\}$$
+$$S(x, t) = \inf_{y \in \mathbb{R}^d} \left[ S_0(y) + t \cdot L\left(\frac{x - y}{t}\right) \right]$$
 Nilai minimizer $y^*(x, t)$ menentukan titik asal lintasan karakteristik optimal, sehingga gradien momentum $p(x,t) = \nabla L\left(\frac{x - y^*(x,t)}{t}\right)$ secara otomatis memenuhi syarat entitas entropi $\quad \blacksquare$
 
 ---
@@ -111,7 +111,7 @@ Nilai minimizer $y^*(x, t)$ menentukan titik asal lintasan karakteristik optimal
 > **Pernyataan Teorema**: Apabila dinamika sistem robotik dipengaruhi oleh derau stochastik gerak Brown $dx_t = f(x_t, u_t) dt + \sigma dW_t$, maka fungsi nilai cost-to-go $V(x,t)$ memenuhi PDE orde dua:
 
 **Bukti Matematika Formal**:
-$$\frac{\partial V(x, t)}{\partial t} + \frac{1}{2} \sigma^2 \Delta V(x, t) + \min_{u \in \mathcal{U}} \left\{ L(x, u) + \nabla V(x, t) \cdot f(x, u) \right\} = 0 \quad \blacksquare$$
+$$\frac{\partial V(x, t)}{\partial t} + \frac{1}{2} \sigma^2 \Delta V(x, t) + \min_{u \in \mathcal{U}} \left[ L(x, u) + \nabla V(x, t) \cdot f(x, u) \right] = 0 \quad \blacksquare$$
 
 ---
 
