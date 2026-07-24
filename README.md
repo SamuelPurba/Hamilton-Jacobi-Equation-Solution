@@ -1,16 +1,20 @@
-# 🏆 Hamilton-Jacobi PDE Perfect Solver & Research Suite: High-Precision Analytical Engine and Viscosity Solutions for Autonomous Robotics
+<h1 align="center">
+  🏆 Hamilton-Jacobi PDE Perfect Solver & Research Suite:<br>
+  High-Precision Analytical Engine and Viscosity Solutions for Autonomous Robotics
+</h1>
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/SamuelPurba/Rumus-Perpangkatan-Universal-4.0/main/avatar_profile.png" alt="Samuel Hasiholan Omega Purba, S. Tr. T." width="160" style="border-radius: 50%; border: 4px solid #6366f1; box-shadow: 0 12px 35px rgba(99, 102, 241, 0.5);" />
 </p>
 
-<h2 align="center">
-  IEEE Transactions Standard Monograph and Software Architecture<br>for Hamilton-Jacobi Nonlinear Partial Differential Equations
-</h2>
+<h3 align="center">
+  IEEE Transactions Standard Monograph and Software Architecture<br>
+  for Hamilton-Jacobi Nonlinear Partial Differential Equations
+</h3>
 
 <p align="center">
   <strong>Samuel Hasiholan Omega Purba, S. Tr. T.</strong>, <em>Graduate Researcher</em><br>
-  Department of Electrical Engineering, Program Study of Robotics Engineering and Artificial Intelligence (A.I)<br>
+  Program Studi Teknik Robotika dan Kecerdasan Buatan (A.I), Jurusan Teknik Elektro<br>
   <strong>Politeknik Negeri Batam</strong>, Batam 29461, Riau Islands, Indonesia<br>
   Founder, <strong>BeruangLaut.ID</strong> | Email: <code>samuel@beruanglaut.id</code>
 </p>
@@ -27,21 +31,21 @@
 
 ---
 
-## Abstract
+## 📜 ABSTRACT
 
-***Abstract*—This research monograph and open-source computational software suite present a rigorous mathematical formalization, analytical calculus audit, and high-performance interactive software suite for solving the Hamilton-Jacobi Partial Differential Equation (HJ-PDE). Non-linear first-order PDEs governed by $\frac{\partial S}{\partial t} + H\left(q, \frac{\partial S}{\partial q}, t\right) = 0$ inherently develop gradient discontinuities (shocks and kinks) due to intersecting characteristic trajectories in phase space. Under the IEEE academic publication standard and Scopus Q1 benchmark, we establish the Crandall-Lions Viscosity Solution framework, Fenchel-Legendre duality, Lax-Oleinik infimal convolution, Quantum Hamilton-Jacobi Bohmian Mechanics, and Stochastic Hamilton-Jacobi-Bellman (HJB) continuous-time dynamic programming for autonomous mobile robotics. The implemented software suite demonstrates $100\%$ computational precision with sub-millisecond execution time ($<0.01\text{ ms}$) leveraging a 2D Fast Sweeping Viscosity Solver, 4th-Order Symplectic Runge-Kutta phase space ray tracing, and a 0% error daily automated CI/CD validation suite.**
-
-***Index Terms*—Hamilton-Jacobi PDE, Viscosity Solutions, Lax-Oleinik Formula, Stochastic Hamilton-Jacobi-Bellman (HJB), Autonomous Robotics, Fast Sweeping Method, IEEE Transactions.**
+> ***Abstract*—This research monograph and open-source computational software suite present a mathematical formalization, analytical calculus audit, and high-performance interactive software suite for solving the Hamilton-Jacobi Partial Differential Equation (HJ-PDE). Non-linear first-order PDEs governed by $\frac{\partial S}{\partial t} + H\left(q, \frac{\partial S}{\partial q}, t\right) = 0$ inherently develop gradient discontinuities (shocks and kinks) due to intersecting characteristic trajectories in phase space. Under the IEEE academic publication standard and Scopus Q1 benchmark, we establish the Crandall-Lions Viscosity Solution framework, Fenchel-Legendre duality, Lax-Oleinik infimal convolution, Quantum Hamilton-Jacobi Bohmian Mechanics, and Stochastic Hamilton-Jacobi-Bellman (HJB) continuous-time dynamic programming for autonomous mobile robotics. The implemented software suite demonstrates $100\%$ computational precision with sub-millisecond execution time ($<0.01\text{ ms}$) leveraging a 2D Fast Sweeping Viscosity Solver, 4th-Order Symplectic Runge-Kutta phase space ray tracing, and a 0% error daily automated CI/CD validation suite.**
+>
+> ***Index Terms*—Hamilton-Jacobi PDE, Viscosity Solutions, Lax-Oleinik Formula, Stochastic Hamilton-Jacobi-Bellman (HJB), Autonomous Robotics, Fast Sweeping Method, IEEE Transactions.**
 
 ---
 
 ## I. INTRODUCTION & THEORETICAL FORMULATION
 
-The Hamilton-Jacobi equation serves as a foundational bridge linking classical Hamiltonian mechanics, optimal control theory, geometric optics, and quantum mechanics:
+The Hamilton-Jacobi equation serves as a foundational pinnacle bridging classical Hamiltonian dynamics, quantum field theory, optimal control theory, and geometric optics:
 
 $$\frac{\partial S(q, t)}{\partial t} + H\left(q, \frac{\partial S}{\partial q}, t\right) = 0, \quad S(q, 0) = S_0(q) \tag{1}$$
 
-where $S(q, t) \in C^1(\mathbb{R}^d \times [0, T])$ denotes **Hamilton's Principal Action**, $q \in \mathbb{R}^d$ is the generalized state vector, $p = \nabla_q S$ represents generalized momentum, and $H(q, p, t)$ is the system Hamiltonian.
+where $S(q, t) \in C^1(\mathbb{R}^d \times [0, T])$ denotes **Hamilton's Principal Action**, $q \in \mathbb{R}^d$ represents the generalized state vector, $p = \nabla_q S$ denotes generalized momentum, and $H(q, p, t)$ is the system Hamiltonian.
 
 ---
 
@@ -50,7 +54,7 @@ where $S(q, t) \in C^1(\mathbb{R}^d \times [0, T])$ denotes **Hamilton's Princip
 ### TABLE I: COMPARATIVE ANALYSIS MATRIX OF CLASSICAL vs. IEEE SCOPUS Q1 FORMULATIONS
 
 | Analysis Component | Classical Formulation | Mathematical Singularity / Anomaly | IEEE Scopus Q1 Corrected Formulation | Rigor & Precision Status |
-| :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- | :---: |
 | **Solution Character** | Classical $C^1(\mathbb{R}^d \times [0,T])$ Solution | **Intersecting Characteristics**: Causes gradient shocks in $p = \nabla S$. | **Crandall-Lions Viscosity Solution**: Test function sub/super-solutions. | 100% Verified Unique |
 | **Variational Convolution** | Direct Line Integration | **Multivalued Action**: $S(x,t)$ becomes multivalued at caustics. | **Lax-Oleinik Infimal Convolution**: $S(x,t) = \inf_{y} [ S_0(y) + t L(\frac{x-y}{t}) ]$. | Exact Precision ($<10^{-15}$) |
 | **Robotic Optimal Control** | Deterministic Euler-Lagrange | **Noise Sensitivity**: Fails under environmental noise perturbations. | **Stochastic HJB PDE**: $\frac{\partial V}{\partial t} + \frac{1}{2}\sigma^2 \Delta V + \min_u [L + \nabla V \cdot f] = 0$. | Stable Under Noise ($\sigma = 0.08$) |
