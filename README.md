@@ -16,7 +16,7 @@
   <strong>Samuel Hasiholan Omega Purba, S. Tr. T.</strong>, <em>Graduate Researcher</em><br>
   Program Studi Teknik Robotika dan Kecerdasan Buatan (A.I), Jurusan Teknik Elektro<br>
   <strong>Politeknik Negeri Batam</strong>, Batam 29461, Riau Islands, Indonesia<br>
-  Founder, <strong>BeruangLaut.ID</strong> | Email: <code>samuel@beruanglaut.id</code>
+  Founder : <strong>BeruangLaut.ID</strong> | Email : <code>spurba563s@gmail.com</code>
 </p>
 
 <p align="center">
