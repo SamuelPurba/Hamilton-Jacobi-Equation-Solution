@@ -41,9 +41,7 @@
 
 ## I. INTRODUCTION & THEORETICAL FORMULATION
 
-The non-linear first-order Hamilton-Jacobi Partial Differential Equation serves as a foundational pinnacle bridging classical Hamiltonian dynamics, quantum field theory, optimal control theory, and geometric optics:
-
-$$\frac{\partial S(q, t)}{\partial t} + H\left(q, \, \frac{\partial S(q, t)}{\partial q}, \, t\right) = 0, \quad \text{with initial condition } S(q, 0) = S_0(q) \tag{1}$$
+The non-linear first-order Hamilton-Jacobi Partial Differential Equation serves as a foundational pinnacle bridging classical Hamiltonian dynamics, quantum field theory, optimal control theory, and geometric optics.
 
 ### Mathematical Variable & Operator Specifications:
 * **$S(q, t) \in C^1(\mathbb{R}^d \times [0, T])$**: Hamilton's Principal Action field on the configuration-time manifold.
@@ -72,7 +70,7 @@ $$\frac{\partial S(q, t)}{\partial t} + H\left(q, \, \frac{\partial S(q, t)}{\pa
 
 ```mermaid
 graph TD
-    A["Equation (1): Hamilton-Jacobi PDE dS/dt + H(q,grad S,t) = 0"] --> T1["Theorem 1: Crandall-Lions Viscosity Solution"]
+    A["Original Formulation: Hamilton-Jacobi PDE dS/dt + H(q,grad S,t) = 0"] --> T1["Theorem 1: Crandall-Lions Viscosity Solution"]
     A --> T2["Theorem 2: Lax-Oleinik Infimal Convolution"]
     A --> T3["Theorem 3: Stochastic HJB Diffusion & Laplacian"]
     A --> T4["Theorem 4: Closed-Loop Optimal Control Feedback u*"]
