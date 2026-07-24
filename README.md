@@ -101,11 +101,11 @@ Menggunakan sifat pertidaksamaan fungsi uji $C^1$, pada titik diskontinuitas gra
 ---
 
 #### **Teorema 2 (Representasi Variasional Lax-Oleinik & Dualitas Fenchel-Legendre)**
-> **Pernyataan Teorema**: Untuk Hamiltonian cembung $H(p)$, Fungsi Lagrangian Dual $L(v)$ didefinisikan sebagai $L(v) = \sup_{p} \{ p \cdot v - H(p) \}$. Solusi Viscosity tunggal $S(x, t)$ diberikan secara eksak oleh konvolusi infimal:
+> **Pernyataan Teorema**: Untuk Hamiltonian cembung $H(p)$, Fungsi Lagrangian Dual $L(v)$ didefinisikan sebagai $L(v) = \sup_{p \in \mathbb{R}^d} \{ p \cdot v - H(p) \}$. Solusi Viscosity tunggal $S(x, t)$ diberikan secara eksak oleh konvolusi infimal:
 
 **Bukti Matematika Formal**:
 $$S(x, t) = \inf_{y \in \mathbb{R}^d} \left\{ S_0(y) + t \cdot L\left(\frac{x - y}{t}\right) \right\}$$
-Nilai minimizer $y^*(x, t)$ menentukan titik asal lintasan karakteristik optimal, sehingga gradien momentum $p(x,t) = \nabla L\left(\frac{x - y^*}{t}\right)$ secara otomatis memenuhi syarat entitas entropi $\quad \blacksquare$
+Nilai minimizer $y^*(x, t)$ menentukan titik asal lintasan karakteristik optimal, sehingga gradien momentum $p(x,t) = \nabla L\left(\frac{x - y^*(x,t)}{t}\right)$ secara otomatis memenuhi syarat entitas entropi $\quad \blacksquare$
 
 ---
 
