@@ -149,7 +149,6 @@ py -3 test_scopus_q1_benchmarks.py
 [1] M. G. Crandall and P.-L. Lions, "Viscosity solutions of Hamilton-Jacobi equations," *Transactions of the American Mathematical Society*, vol. 277, no. 1, pp. 1–42, 1983.  
 [2] L. C. Evans, *Partial Differential Equations*, 2nd ed. Providence, RI: American Mathematical Society, 2010.  
 [3] R. Bellman, *Dynamic Programming*. Princeton, NJ: Princeton University Press, 1957.  
-[4] S. H. Omega, "High-Precision Analytical Engine and Viscosity Solutions for Autonomous Robotics," *Politeknik Negeri Batam & BeruangLaut.ID Publications*, vol. 1, pp. 1–25, 2026.
 
 ---
 
