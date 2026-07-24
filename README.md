@@ -4,7 +4,7 @@
 </h1>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/SamuelPurba/Rumus-Perpangkatan-Universal-4.0/main/avatar_profile.png" alt="Samuel Hasiholan Omega Purba, S. Tr. T." width="160" style="border-radius: 50%; border: 4px solid #6366f1; box-shadow: 0 12px 35px rgba(99, 102, 241, 0.5);" />
+  <img src="https://raw.githubusercontent.com/SamuelPurba/Rumus-Perpangkatan-Universal-4.0/main/avatar_profile.png" alt="Samuel Hasiholan Omega, S. Tr. T." width="160" style="border-radius: 50%; border: 4px solid #6366f1; box-shadow: 0 12px 35px rgba(99, 102, 241, 0.5);" />
 </p>
 
 <h3 align="center">
@@ -13,7 +13,7 @@
 </h3>
 
 <p align="center">
-  <strong>Samuel Hasiholan Omega Purba, S. Tr. T.</strong>, <em>Graduate Researcher & Founder</em><br>
+  <strong>Samuel Hasiholan Omega, S. Tr. T.</strong>, <em>Graduate Researcher & Founder</em><br>
   Program Studi Teknik Robotika dan Kecerdasan Buatan (A.I), Jurusan Teknik Elektro<br>
   <strong>Politeknik Negeri Batam</strong>, Batam 29461, Riau Islands, Indonesia<br>
   Founder : <strong>BeruangLaut.ID</strong> | Email : <code>spurba563s@gmail.com</code>
@@ -33,7 +33,7 @@
 
 ## 📜 ABSTRACT
 
-> ***Abstract*—This research monograph and open-source computational software suite, conceptualized and authored by Samuel Hasiholan Omega Purba, S. Tr. T., present a unified mathematical formalization, analytical calculus audit, and high-performance interactive software suite for solving the non-linear first-order Hamilton-Jacobi Partial Differential Equation (HJ-PDE). Governed by $\frac{\partial S}{\partial t} + H\left(q, \frac{\partial S}{\partial q}, t\right) = 0$, Hamilton-Jacobi equations naturally develop gradient discontinuities (shocks, kinks, and caustics) due to intersecting characteristic trajectories in phase space. Formulated under the IEEE academic publication standard and Scopus Q1 benchmark, this work bridges the Crandall-Lions Viscosity Solution framework, Fenchel-Legendre duality, Lax-Oleinik infimal convolution, Quantum Hamilton-Jacobi Bohmian Mechanics, and Stochastic Hamilton-Jacobi-Bellman (HJB) continuous-time dynamic programming for autonomous mobile robotics. The implemented software engine demonstrates $100\%$ computational precision with sub-millisecond execution time ($<0.01\text{ ms}$) leveraging a 2D Fast Sweeping Viscosity Solver, 4th-Order Symplectic Runge-Kutta phase space ray tracing, and a 0% error daily automated CI/CD self-healing validation suite.**
+> ***Abstract*—This research monograph and open-source computational software suite, conceptualized and authored by Samuel Hasiholan Omega, S. Tr. T., present a unified mathematical formalization, analytical calculus audit, and high-performance interactive software suite for solving the non-linear first-order Hamilton-Jacobi Partial Differential Equation (HJ-PDE). Governed by $\frac{\partial S}{\partial t} + H\left(q, \frac{\partial S}{\partial q}, t\right) = 0$, Hamilton-Jacobi equations naturally develop gradient discontinuities (shocks, kinks, and caustics) due to intersecting characteristic trajectories in phase space. Formulated under the IEEE academic publication standard and Scopus Q1 benchmark, this work bridges the Crandall-Lions Viscosity Solution framework, Fenchel-Legendre duality, Lax-Oleinik infimal convolution, Quantum Hamilton-Jacobi Bohmian Mechanics, and Stochastic Hamilton-Jacobi-Bellman (HJB) continuous-time dynamic programming for autonomous mobile robotics. The implemented software engine demonstrates $100\%$ computational precision with sub-millisecond execution time ($<0.01\text{ ms}$) leveraging a 2D Fast Sweeping Viscosity Solver, 4th-Order Symplectic Runge-Kutta phase space ray tracing, and a 0% error daily automated CI/CD self-healing validation suite.**
 >
 > ***Index Terms*—Hamilton-Jacobi PDE, Viscosity Solutions, Lax-Oleinik Formula, Stochastic Hamilton-Jacobi-Bellman (HJB), Autonomous Robotics, Fast Sweeping Method, IEEE Transactions.**
 
@@ -41,7 +41,7 @@
 
 ## I. INTRODUCTION & THEORETICAL FORMULATION
 
-The non-linear first-order Hamilton-Jacobi Partial Differential Equation serves as a foundational pinnacle bridging classical Hamiltonian dynamics, quantum field theory, optimal control theory, and geometric optics. As formulated in the research vision of Samuel Hasiholan Omega Purba, S. Tr. T., the action field $S(q, t)$ governs the phase space geometry of physical trajectories and autonomous robotic systems under optimal control policies.
+The non-linear first-order Hamilton-Jacobi Partial Differential Equation serves as a foundational pinnacle bridging classical Hamiltonian dynamics, quantum field theory, optimal control theory, and geometric optics. As formulated in the research vision of Samuel Hasiholan Omega, S. Tr. T., the action field $S(q, t)$ governs the phase space geometry of physical trajectories and autonomous robotic systems under optimal control policies.
 
 ### Mathematical Variable & Operator Specifications (IEEE Notation Standard):
 * **$S : \mathbb{R}^d \times [0, T] \to \mathbb{R}$**: Hamilton's Principal Action scalar field defined on the continuous domain $\mathbb{R}^d \times [0, T]$.
@@ -149,15 +149,15 @@ py -3 test_scopus_q1_benchmarks.py
 [1] M. G. Crandall and P.-L. Lions, "Viscosity solutions of Hamilton-Jacobi equations," *Transactions of the American Mathematical Society*, vol. 277, no. 1, pp. 1–42, 1983.  
 [2] L. C. Evans, *Partial Differential Equations*, 2nd ed. Providence, RI: American Mathematical Society, 2010.  
 [3] R. Bellman, *Dynamic Programming*. Princeton, NJ: Princeton University Press, 1957.  
-[4] S. H. O. Purba, "High-Precision Analytical Engine and Viscosity Solutions for Autonomous Robotics," *Politeknik Negeri Batam & BeruangLaut.ID Publications*, vol. 1, pp. 1–25, 2026.
+[4] S. H. Omega, "High-Precision Analytical Engine and Viscosity Solutions for Autonomous Robotics," *Politeknik Negeri Batam & BeruangLaut.ID Publications*, vol. 1, pp. 1–25, 2026.
 
 ---
 
 ### Citation (IEEE BibTeX Format)
 
 ```bibtex
-@article{Purba2026HamiltonJacobi,
-  author = {Purba, Samuel Hasiholan Omega},
+@article{Omega2026HamiltonJacobi,
+  author = {Omega, Samuel Hasiholan},
   title = {Hamilton-Jacobi PDE Perfect Solver, Lax-Oleinik Variational Representation and Viscosity Research Suite for Autonomous Robotics},
   journal = {IEEE Transactions Standard Monograph & Politeknik Negeri Batam Publications},
   year = {2026},
@@ -168,4 +168,4 @@ py -3 test_scopus_q1_benchmarks.py
 ```
 
 ---
-*Authored with academic rigor by **Samuel Hasiholan Omega Purba, S. Tr. T.** — Batam, Indonesia.*
+*Authored with academic rigor by **Samuel Hasiholan Omega, S. Tr. T.** — Batam, Indonesia.*

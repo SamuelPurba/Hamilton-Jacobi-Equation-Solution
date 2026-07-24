@@ -2,7 +2,7 @@
 ====================================================================================================
 DAILY ROUTINE AUTOMATION & HEALTH CHECK SUITE
 Hamilton-Jacobi PDE Research Suite (Scopus Q1 Top 1% World Class)
-Author: Samuel Hasiholan Omega Purba, S. Tr. T. | Politeknik Negeri Batam
+Author: Samuel Hasiholan Omega, S. Tr. T. | Politeknik Negeri Batam
 ====================================================================================================
 """
 
@@ -16,7 +16,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 
 print("=" * 80)
 print(f"⚡ HAMILTON-JACOBI PDE RESEARCH SUITE - DAILY ROUTINE [{datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')}]")
-print("Author: Samuel Hasiholan Omega Purba, S. Tr. T. | Politeknik Negeri Batam (BeruangLaut.ID)")
+print("Author: Samuel Hasiholan Omega, S. Tr. T. | Politeknik Negeri Batam (BeruangLaut.ID)")
 print("=" * 80)
 
 def run_test(name, test_func):

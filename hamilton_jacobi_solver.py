@@ -1,7 +1,7 @@
 """
 ====================================================================================================
 HAMILTON-JACOBI PDE PERFECT SOLVER & RESEARCH SUITE (SCOPUS Q1 TOP 1% WORLD CLASS)
-Author: Samuel Hasiholan Omega Purba, S. Tr. T.
+Author: Samuel Hasiholan Omega, S. Tr. T.
 Prodi Teknik Robotika dan Kecerdasan Buatan, Jurusan Teknik Elektro, Politeknik Negeri Batam
 Founder : BeruangLaut.ID | Email : spurba563s@gmail.com
 ====================================================================================================
@@ -175,7 +175,7 @@ class MainWindow(QMainWindow):
         title_label.setFont(QFont("Arial", 16, QFont.Weight.Bold))
         title_label.setStyleSheet("color: #38bdf8;")
         
-        subtitle_label = QLabel("Author: Samuel Hasiholan Omega Purba, S. Tr. T. | Politeknik Negeri Batam (BeruangLaut.ID | spurba563s@gmail.com)")
+        subtitle_label = QLabel("Author: Samuel Hasiholan Omega, S. Tr. T. | Politeknik Negeri Batam (BeruangLaut.ID | spurba563s@gmail.com)")
         subtitle_label.setStyleSheet("color: #94a3b8; font-style: italic;")
         
         header_vbox = QVBoxLayout()
@@ -464,7 +464,7 @@ class MainWindow(QMainWindow):
         <p>The continuous optimal control policy is given by <i>u*(x,t) = -R⁻¹ Bᵀ ∇V(x,t)</i>.</p>
 
         <hr style='border: 1px solid #334155;'>
-        <p style='color:#94a3b8;'><i>Authored by Samuel Hasiholan Omega Purba, S. Tr. T. — Founder : BeruangLaut.ID | Email : spurba563s@gmail.com</i></p>
+        <p style='color:#94a3b8;'><i>Authored by Samuel Hasiholan Omega, S. Tr. T. — Founder : BeruangLaut.ID | Email : spurba563s@gmail.com</i></p>
         """)
         layout.addWidget(txt)
 
