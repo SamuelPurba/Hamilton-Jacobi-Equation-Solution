@@ -46,8 +46,6 @@ The non-linear first-order Hamilton-Jacobi Partial Differential Equation serves 
 ### Mathematical Variable & Operator Specifications (IEEE Notation Standard):
 * **$S : \mathbb{R}^d \times [0, T] \to \mathbb{R}$**: Hamilton's Principal Action scalar field defined on the continuous configuration-time domain manifold $C(\mathbb{R}^d \times [0, T])$.
 * **$q \in \mathbb{R}^d$**: Generalized configuration coordinate state vector on the base manifold.
-* **$p = \nabla_q S = \frac{\partial S}{\partial q} \in T_q^* \mathbb{R}^d$**: Generalized canonical momentum covector field defined on the cotangent fiber space $T_q^* \mathbb{R}^d$.
-* **$H : T^* \mathbb{R}^d \times [0, T] \to \mathbb{R}$**: System Hamiltonian energy functional operator defined on the cotangent bundle $T^* \mathbb{R}^d = \bigcup_{q \in \mathbb{R}^d} T_q^* \mathbb{R}^d$.
 * **$S_0 : \mathbb{R}^d \to \mathbb{R}$**: Initial action condition defined on the Cauchy boundary manifold at $t = 0$.
 
 ---
