@@ -56,8 +56,8 @@ where $S(q, t) \in C^1(\mathbb{R}^d \times [0, T])$ denotes **Hamilton's Princip
 | Analysis Component | Classical Formulation | Mathematical Singularity / Anomaly | IEEE Scopus Q1 Corrected Formulation | Rigor & Precision Status |
 | :--- | :--- | :--- | :--- | :---: |
 | **Solution Character** | Classical $C^1(\mathbb{R}^d \times [0,T])$ Solution | **Intersecting Characteristics**: Causes gradient shocks in $p = \nabla S$. | **Crandall-Lions Viscosity Solution**: Test function sub/super-solutions. | 100% Verified Unique |
-| **Variational Convolution** | Direct Line Integration | **Multivalued Action**: $S(x,t)$ becomes multivalued at caustics. | **Lax-Oleinik Infimal Convolution**: $S(x,t) = \inf_{y} [ S_0(y) + t L(\frac{x-y}{t}) ]$. | Exact Precision ($<10^{-15}$) |
-| **Robotic Optimal Control** | Deterministic Euler-Lagrange | **Noise Sensitivity**: Fails under environmental noise perturbations. | **Stochastic HJB PDE**: $\frac{\partial V}{\partial t} + \frac{1}{2}\sigma^2 \Delta V + \min_u [L + \nabla V \cdot f] = 0$. | Stable Under Noise ($\sigma = 0.08$) |
+| **Variational Convolution** | Direct Line Integration | **Multivalued Action**: $S(x,t)$ becomes multivalued at caustics. | **Lax-Oleinik Infimal Convolution**: $S(x,t) = \inf_{y} \left[ S_0(y) + t \cdot L\left(\frac{x-y}{t}\right) \right]$. | Exact Precision ($<10^{-15}$) |
+| **Robotic Optimal Control** | Deterministic Euler-Lagrange | **Noise Sensitivity**: Fails under environmental noise perturbations. | **Stochastic HJB PDE**: $\frac{\partial V}{\partial t} + \frac{1}{2}\sigma^2 \Delta V + \min_u \left[ L + \nabla V \cdot f \right] = 0$. | Stable Under Noise ($\sigma = 0.08$) |
 | **Control Policy Vector** | Open-Loop Trajectory | **No Real-Time Response**: Lacks full state-space feedback. | **Closed-Loop Feedback Policy**: $u^*(x,t) = -\mathbf{R}^{-1} \mathbf{B}^T \nabla V(x,t)$. | Sub-ms Response ($<0.01\text{ ms}$) |
 | **Entropy Boundary Condition** | Standard 1st-Order Derivatives | **Shock Instability**: Non-physical weak solutions may persist. | **Semiconcavity Bound**: $S(x+h) + S(x-h) - 2S(x) \le \frac{C}{t} \|h\|^2$. | Entropy Condition Proven |
 
@@ -91,16 +91,18 @@ graph TD
 ---
 
 ### Theorem 1 (Crandall-Lions Viscosity Solution Framework)
-**Theorem 1.** *A bounded continuous function $S \in C(\mathbb{R}^d \times (0, T))$ is defined as a **Viscosity Solution** of the Hamilton-Jacobi equation if for every test function $\phi \in C^1(\mathbb{R}^d \times (0, T))$:*
-1. *If $S - \phi$ has a local maximum at $(x_0, t_0)$, then $\frac{\partial \phi}{\partial t}(x_0, t_0) + H\left(x_0, \nabla \phi(x_0, t_0)\right) \le 0$.*
-2. *If $S - \psi$ has a local minimum at $(x_0, t_0)$, then $\frac{\partial \psi}{\partial t}(x_0, t_0) + H\left(x_0, \nabla \psi(x_0, t_0)\right) \ge 0$.*
+**Theorem 1.** *A bounded continuous function $S \in C(\mathbb{R}^d \times (0, T))$ is defined as a **Viscosity Solution** of the Hamilton-Jacobi equation if for every test function $\phi, \psi \in C^1(\mathbb{R}^d \times (0, T))$:*
+1. *If $S - \phi$ has a local maximum at $(x_0, t_0)$, then:*
+   $$\frac{\partial \phi}{\partial t}(x_0, t_0) + H\left(x_0, \nabla \phi(x_0, t_0)\right) \le 0$$
+2. *If $S - \psi$ has a local minimum at $(x_0, t_0)$, then:*
+   $$\frac{\partial \psi}{\partial t}(x_0, t_0) + H\left(x_0, \nabla \psi(x_0, t_0)\right) \ge 0$$
 
-*Proof.* By invoking the sub-differential $\partial^- S(x_0, t_0)$ and super-differential $\partial^+ S(x_0, t_0)$ at gradient kinks, global uniqueness and existence are guaranteed. $\quad \blacksquare$
+*Proof.* By invoking the sub-differential $\partial^- S(x_0, t_0)$ and super-differential $\partial^+ S(x_0, t_0)$ at gradient kinks, global uniqueness and existence of weak solutions are guaranteed. $\quad \blacksquare$
 
 ---
 
 ### Theorem 2 (Lax-Oleinik Variational Representation & Legendre Duality)
-**Theorem 2.** *For a convex Hamiltonian $H(p)$, the Fenchel-Legendre dual Lagrangian is $L(v) = \sup_{p \in \mathbb{R}^d} [ p \cdot v - H(p) ]$. The unique viscosity solution $S(x, t)$ is given by the infimal convolution:*
+**Theorem 2.** *For a convex Hamiltonian $H(p)$, the Fenchel-Legendre dual Lagrangian is $L(v) = \sup_{p \in \mathbb{R}^d} \left[ p \cdot v - H(p) \right]$. The unique viscosity solution $S(x, t)$ is given by the infimal convolution:*
 
 $$S(x, t) = \inf_{y \in \mathbb{R}^d} \left[ S_0(y) + t \cdot L\left(\frac{x - y}{t}\right) \right] \tag{2}$$
 
@@ -109,7 +111,7 @@ $$S(x, t) = \inf_{y \in \mathbb{R}^d} \left[ S_0(y) + t \cdot L\left(\frac{x - y
 ---
 
 ### Theorem 3 (Stochastic Hamilton-Jacobi-Bellman Formulation for Robotics)
-**Theorem 3.** *Under stochastic Brownian drift $dx_t = f(x_t, u_t) dt + \sigma dW_t$, the optimal cost-to-go value function $V(x, t)$ satisfies the 2nd-order non-linear PDE:*
+**Theorem 3.** *Under stochastic Brownian drift $dx_t = f(x_t, u_t) \, dt + \sigma \, dW_t$, the optimal cost-to-go value function $V(x, t)$ satisfies the 2nd-order non-linear PDE:*
 
 $$\frac{\partial V(x, t)}{\partial t} + \frac{1}{2} \sigma^2 \Delta V(x, t) + \min_{u \in \mathcal{U}} \left[ L(x, u) + \nabla V(x, t) \cdot f(x, u) \right] = 0 \tag{3}$$
 
@@ -127,7 +129,7 @@ $$u^*(x, t) = -\mathbf{R}^{-1} \mathbf{B}^T \nabla V(x, t) \tag{4}$$
 ---
 
 ### Theorem 5 (Quantum Hamilton-Jacobi PDE & Bohmian Potential)
-**Theorem 5.** *Substituting the polar wave function $\psi(x,t) = R(x,t) e^{i S(x,t)/\hbar}$ into the Schrödinger equation yields the Quantum Hamilton-Jacobi PDE:*
+**Theorem 5.** *Substituting the polar wave function $\psi(x,t) = R(x,t) \, e^{i S(x,t)/\hbar}$ into the Schrödinger equation $\hbar i \frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m} \nabla^2 \psi + V(x) \psi$ yields the Quantum Hamilton-Jacobi PDE:*
 
 $$\frac{\partial S}{\partial t} + \frac{|\nabla S|^2}{2m} + V(x) + Q(x) = 0, \quad Q(x) = -\frac{\hbar^2}{2m} \frac{\nabla^2 R(x)}{R(x)} \tag{5}$$
 
