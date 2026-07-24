@@ -69,25 +69,25 @@ The non-linear first-order Hamilton-Jacobi Partial Differential Equation serves 
 
 ```mermaid
 graph TD
-    A["Original Formulation: Hamilton-Jacobi PDE dS/dt + H(q,grad S,t) = 0"] --> T1["Theorem 1: Crandall-Lions Viscosity Solution"]
+    A["Original Formulation: Hamilton-Jacobi PDE"] --> T1["Theorem 1: Crandall-Lions Viscosity Solution"]
     A --> T2["Theorem 2: Lax-Oleinik Infimal Convolution"]
-    A --> T3["Theorem 3: Stochastic HJB Diffusion & Laplacian"]
-    A --> T4["Theorem 4: Closed-Loop Optimal Control Feedback u*"]
-    A --> T5["Theorem 5: Quantum Hamilton-Jacobi & Bohmian Potential"]
+    A --> T3["Theorem 3: Stochastic HJB Diffusion and Laplacian"]
+    A --> T4["Theorem 4: Closed-Loop Optimal Control Feedback Policy"]
+    A --> T5["Theorem 5: Quantum Hamilton-Jacobi and Bohmian Potential"]
 
-    T1 --> T1_RES["Existence & Uniqueness of Continuous Solution Verified"]
-    T2 --> T2_RES["Legendre Duality L(v) & Minimizer y*(x,t) Converged"]
+    T1 --> T1_RES["Existence and Uniqueness of Continuous Solution Verified"]
+    T2 --> T2_RES["Legendre Duality L(v) and Minimizer y_opt Converged"]
     T3 --> T3_RES["Robotic Stochastic Actuator Noise Stability Proven"]
     T4 --> T4_RES["Real-Time State Feedback Policy Vector Synthesized"]
-    T5 --> T5_RES["Quantum Potential Q(x) & WKB Asymptotic Limit Verified"]
+    T5 --> T5_RES["Quantum Potential Q(x) and WKB Asymptotic Limit Verified"]
 
-    T1_RES --> EQUAL["IEEE Compliant Formulation: Samuel.AI Hamilton-Jacobi Engine"]
+    T1_RES --> EQUAL["IEEE Compliant Formulation Engine"]
     T2_RES --> EQUAL
     T3_RES --> EQUAL
     T4_RES --> EQUAL
     T5_RES --> EQUAL
 
-    EQUAL --> ENGINE["Samuel.AI Analytical Engine Sub-ms Compute Time & PyQt6 GUI"]
+    EQUAL --> ENGINE["Analytical Viscosity Engine Sub-ms Compute and PyQt6 GUI"]
 ```
 
 ---
