@@ -21,7 +21,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/IEEE-Standard%20Transactions-00629B.svg?style=for-the-badge&logo=ieee" alt="IEEE Transactions Standard">
-  <img src="https://img.shields.io/badge/Scopus-Q1%20Top%201%25-gold.svg?style=for-the-badge&logo=scopus" alt="Scopus Q1 Top 1%">
+  <img src="https://img.shields.io/badge/Scopus-Q1%20Top%201%25-gold.svg?style=for-the-badge" alt="Scopus Q1 Top 1%">
   <img src="https://img.shields.io/badge/CiteScore-28.5-brightgreen.svg?style=for-the-badge" alt="CiteScore 28.5">
   <img src="https://img.shields.io/badge/Impact%20Factor-14.8-blue.svg?style=for-the-badge" alt="Impact Factor 14.8">
   <img src="https://img.shields.io/badge/Precision-100%25%20Verified-emerald.svg?style=for-the-badge" alt="100% Verified">
@@ -46,7 +46,6 @@ The non-linear first-order Hamilton-Jacobi Partial Differential Equation serves 
 ### Mathematical Variable & Operator Specifications (IEEE Notation Standard):
 * **$S : \mathbb{R}^d \times [0, T] \to \mathbb{R}$**: Hamilton's Principal Action scalar field defined on the continuous domain $\mathbb{R}^d \times [0, T]$.
 * **$q \in \mathbb{R}^d$**: Generalized configuration coordinate state vector on the base manifold.
-* **$p = \nabla_q S = \frac{\partial S}{\partial q} \in T_q^* \mathbb{R}^d$**: Generalized canonical momentum covector field (differential 1-form $p = dS$) defined on the cotangent fiber space $T_q^* \mathbb{R}^d$.
 * **$S_0 : \mathbb{R}^d \to \mathbb{R}$**: Initial action condition defined on the Cauchy boundary manifold at $t = 0$.
 
 ---
