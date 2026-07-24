@@ -95,7 +95,7 @@ graph TD
 1. *If $S - \phi$ has a local maximum at $(x_0, t_0)$, then $\frac{\partial \phi}{\partial t}(x_0, t_0) + H\left(x_0, \nabla \phi(x_0, t_0)\right) \le 0$.*
 2. *If $S - \psi$ has a local minimum at $(x_0, t_0)$, then $\frac{\partial \psi}{\partial t}(x_0, t_0) + H\left(x_0, \nabla \psi(x_0, t_0)\right) \ge 0$.*
 
-*Proof.* By invoking the sub-differential $\partial^- S(x_0, t_0)$ and super-differential $\partial^+ S(x_0, t_0)$ at gradient kinks, global uniqueness and existence are guaranteed. $\blacksquare$
+*Proof.* By invoking the sub-differential $\partial^- S(x_0, t_0)$ and super-differential $\partial^+ S(x_0, t_0)$ at gradient kinks, global uniqueness and existence are guaranteed. $\quad \blacksquare$
 
 ---
 
@@ -104,7 +104,7 @@ graph TD
 
 $$S(x, t) = \inf_{y \in \mathbb{R}^d} \left[ S_0(y) + t \cdot L\left(\frac{x - y}{t}\right) \right] \tag{2}$$
 
-*Proof.* The optimal minimizer point $y^*(x, t)$ identifies the unique characteristic ray origin. Hence, momentum $p(x,t) = \nabla L\left(\frac{x - y^*(x,t)}{t}\right)$ strictly satisfies entropy jump conditions. $\blacksquare$
+*Proof.* The optimal minimizer point $y^*(x, t)$ identifies the unique characteristic ray origin. Hence, momentum $p(x,t) = \nabla L\left(\frac{x - y^*(x,t)}{t}\right)$ strictly satisfies entropy jump conditions. $\quad \blacksquare$
 
 ---
 
@@ -113,7 +113,7 @@ $$S(x, t) = \inf_{y \in \mathbb{R}^d} \left[ S_0(y) + t \cdot L\left(\frac{x - y
 
 $$\frac{\partial V(x, t)}{\partial t} + \frac{1}{2} \sigma^2 \Delta V(x, t) + \min_{u \in \mathcal{U}} \left[ L(x, u) + \nabla V(x, t) \cdot f(x, u) \right] = 0 \tag{3}$$
 
-*Proof.* Applying Itô's Lemma to the continuous Dynamic Programming Principle (DPP) generates the second-order diffusion Laplacian $\frac{1}{2}\sigma^2 \Delta V$. $\blacksquare$
+*Proof.* Applying Itô's Lemma to the continuous Dynamic Programming Principle (DPP) generates the second-order diffusion Laplacian $\frac{1}{2}\sigma^2 \Delta V$. $\quad \blacksquare$
 
 ---
 
@@ -122,7 +122,7 @@ $$\frac{\partial V(x, t)}{\partial t} + \frac{1}{2} \sigma^2 \Delta V(x, t) + \m
 
 $$u^*(x, t) = -\mathbf{R}^{-1} \mathbf{B}^T \nabla V(x, t) \tag{4}$$
 
-*Proof.* Minimizing the Hamiltonian operator with respect to $u \in \mathcal{U}$ yields the continuous stationarity condition $\mathbf{R} u + \mathbf{B}^T \nabla V = 0$. $\blacksquare$
+*Proof.* Minimizing the Hamiltonian operator with respect to $u \in \mathcal{U}$ yields the continuous stationarity condition $\mathbf{R} u + \mathbf{B}^T \nabla V = 0$. $\quad \blacksquare$
 
 ---
 
@@ -131,7 +131,7 @@ $$u^*(x, t) = -\mathbf{R}^{-1} \mathbf{B}^T \nabla V(x, t) \tag{4}$$
 
 $$\frac{\partial S}{\partial t} + \frac{|\nabla S|^2}{2m} + V(x) + Q(x) = 0, \quad Q(x) = -\frac{\hbar^2}{2m} \frac{\nabla^2 R(x)}{R(x)} \tag{5}$$
 
-*Proof.* Separating real and imaginary components under the WKB limit $\hbar \to 0$ recovers classical action dynamics while $Q(x)$ preserves quantum non-locality. $\blacksquare$
+*Proof.* Separating real and imaginary components under the WKB limit $\hbar \to 0$ recovers classical action dynamics while $Q(x)$ preserves quantum non-locality. $\quad \blacksquare$
 
 ---
 
