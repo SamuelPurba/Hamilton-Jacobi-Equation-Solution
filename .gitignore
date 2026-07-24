@@ -1,0 +1,20 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# PyInstaller / Build
+build/
+*.spec
+
+# Temporary MS Office lock files
+~$*
+
+# Environments
+.venv/
+venv/
+ENV/
+
+# System
+.DS_Store
+Thumbs.db
