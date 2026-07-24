@@ -116,8 +116,6 @@ graph TD
 | :--- | :--- | :---: | :---: | :---: | :---: |
 | **Harmonic Oscillator** | Analytical Action-Angle | Exact | Exact | $< 10^{-15}$ | Machine Precision |
 | **Lax-Oleinik Shock Wave** | Infimal Convolution Minimizer | Semi-Analytical | Exact | $4.12 \times 10^{-7}$ | High Order |
-| **2D Eikonal Grid Study** | Fast Sweeping Viscosity | $O(\Delta x)$ | $O(\Delta t)$ | $2.98 \times 10^{-3}$ | First Order ($O(h^{1.05})$) |
-| **Stochastic HJB Control** | Dynamic Policy Iteration | $O(\Delta x^2)$ | Euler-Maruyama | $8.91 \times 10^{-6}$ | Second Order ($O(h^2)$) |
 
 ---
 
