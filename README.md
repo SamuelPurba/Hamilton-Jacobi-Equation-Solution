@@ -90,50 +90,81 @@ graph TD
 
 ---
 
-### Theorem 1 (Crandall-Lions Viscosity Solution Framework)
-**Theorem 1.** *A bounded continuous function $S \in C(\mathbb{R}^d \times (0, T))$ is defined as a **Viscosity Solution** of the Hamilton-Jacobi equation if for every test function $\phi, \psi \in C^1(\mathbb{R}^d \times (0, T))$:*
-1. *If $S - \phi$ has a local maximum at $(x_0, t_0)$, then:*
-   $$\frac{\partial \phi}{\partial t}(x_0, t_0) + H\left(x_0, \nabla \phi(x_0, t_0)\right) \le 0$$
-2. *If $S - \psi$ has a local minimum at $(x_0, t_0)$, then:*
-   $$\frac{\partial \psi}{\partial t}(x_0, t_0) + H\left(x_0, \nabla \psi(x_0, t_0)\right) \ge 0$$
+### 📐 LANDSCAPE MATHEMATICAL THEOREM PROOF PRESENTATION
 
-*Proof.* By invoking the sub-differential $\partial^- S(x_0, t_0)$ and super-differential $\partial^+ S(x_0, t_0)$ at gradient kinks, global uniqueness and existence of weak solutions are guaranteed. $\quad \blacksquare$
+<div align="center">
+<table width="100%">
+<tr>
+<td>
 
----
+#### **Theorem 1 (Crandall-Lions Viscosity Solution Framework)**
 
-### Theorem 2 (Lax-Oleinik Variational Representation & Legendre Duality)
-**Theorem 2.** *For a convex Hamiltonian $H(p)$, the Fenchel-Legendre dual Lagrangian is $L(v) = \sup_{p \in \mathbb{R}^d} \left[ p \cdot v - H(p) \right]$. The unique viscosity solution $S(x, t)$ is given by the infimal convolution:*
+> **Theorem 1.** *A bounded continuous function $S \in C(\mathbb{R}^d \times (0, T))$ is defined as a **Viscosity Solution** of the Hamilton-Jacobi equation if for every test function $\phi, \psi \in C^1(\mathbb{R}^d \times (0, T))$:*
+> 
+> **(a) Subsolution Condition:** *If $S - \phi$ has a local maximum at $(x_0, t_0)$, then:*
+> $$\frac{\partial \phi}{\partial t}(x_0, t_0) + H\left(x_0, \nabla \phi(x_0, t_0)\right) \le 0$$
+> 
+> **(b) Supersolution Condition:** *If $S - \psi$ has a local minimum at $(x_0, t_0)$, then:*
+> $$\frac{\partial \psi}{\partial t}(x_0, t_0) + H\left(x_0, \nabla \psi(x_0, t_0)\right) \ge 0$$
+> 
+> ***Proof.*** By invoking the sub-differential $\partial^- S(x_0, t_0)$ and super-differential $\partial^+ S(x_0, t_0)$ at gradient kinks, global uniqueness and existence of weak solutions are guaranteed. $\quad \blacksquare$
 
-$$S(x, t) = \inf_{y \in \mathbb{R}^d} \left[ S_0(y) + t \cdot L\left(\frac{x - y}{t}\right) \right] \tag{2}$$
+</td>
+</tr>
+<tr>
+<td>
 
-*Proof.* The optimal minimizer point $y^*(x, t)$ identifies the unique characteristic ray origin. Hence, momentum $p(x,t) = \nabla L\left(\frac{x - y^*(x,t)}{t}\right)$ strictly satisfies entropy jump conditions. $\quad \blacksquare$
+#### **Theorem 2 (Lax-Oleinik Variational Representation & Legendre Duality)**
 
----
+> **Theorem 2.** *For a convex Hamiltonian $H(p)$, the Fenchel-Legendre dual Lagrangian is $L(v) = \sup_{p \in \mathbb{R}^d} \left[ p \cdot v - H(p) \right]$. The unique viscosity solution $S(x, t)$ is given by the infimal convolution:*
+> 
+> $$S(x, t) = \inf_{y \in \mathbb{R}^d} \left[ S_0(y) + t \cdot L\left(\frac{x - y}{t}\right) \right] \tag{2}$$
+> 
+> ***Proof.*** The optimal minimizer point $y^*(x, t)$ identifies the unique characteristic ray origin. Hence, momentum $p(x,t) = \nabla L\left(\frac{x - y^*(x,t)}{t}\right)$ strictly satisfies entropy jump conditions. $\quad \blacksquare$
 
-### Theorem 3 (Stochastic Hamilton-Jacobi-Bellman Formulation for Robotics)
-**Theorem 3.** *Under stochastic Brownian drift $dx_t = f(x_t, u_t) \, dt + \sigma \, dW_t$, the optimal cost-to-go value function $V(x, t)$ satisfies the 2nd-order non-linear PDE:*
+</td>
+</tr>
+<tr>
+<td>
 
-$$\frac{\partial V(x, t)}{\partial t} + \frac{1}{2} \sigma^2 \Delta V(x, t) + \min_{u \in \mathcal{U}} \left[ L(x, u) + \nabla V(x, t) \cdot f(x, u) \right] = 0 \tag{3}$$
+#### **Theorem 3 (Stochastic Hamilton-Jacobi-Bellman Formulation for Robotics)**
 
-*Proof.* Applying Itô's Lemma to the continuous Dynamic Programming Principle (DPP) generates the second-order diffusion Laplacian $\frac{1}{2}\sigma^2 \Delta V$. $\quad \blacksquare$
+> **Theorem 3.** *Under stochastic Brownian drift $dx_t = f(x_t, u_t) \, dt + \sigma \, dW_t$, the optimal cost-to-go value function $V(x, t)$ satisfies the 2nd-order non-linear PDE:*
+> 
+> $$\frac{\partial V(x, t)}{\partial t} + \frac{1}{2} \sigma^2 \Delta V(x, t) + \min_{u \in \mathcal{U}} \left[ L(x, u) + \nabla V(x, t) \cdot f(x, u) \right] = 0 \tag{3}$$
+> 
+> ***Proof.*** Applying Itô's Lemma to the continuous Dynamic Programming Principle (DPP) generates the second-order diffusion Laplacian $\frac{1}{2}\sigma^2 \Delta V$. $\quad \blacksquare$
 
----
+</td>
+</tr>
+<tr>
+<td>
 
-### Theorem 4 (Closed-Loop Optimal Feedback Control Policy)
-**Theorem 4.** *For control-affine dynamic systems $f(x,u) = f_0(x) + \mathbf{B}u$ with quadratic control cost $\frac{1}{2} u^T \mathbf{R} u$, the analytical feedback policy $u^*(x,t)$ is given by:*
+#### **Theorem 4 (Closed-Loop Optimal Feedback Control Policy)**
 
-$$u^*(x, t) = -\mathbf{R}^{-1} \mathbf{B}^T \nabla V(x, t) \tag{4}$$
+> **Theorem 4.** *For control-affine dynamic systems $f(x,u) = f_0(x) + \mathbf{B}u$ with quadratic control cost $\frac{1}{2} u^T \mathbf{R} u$, the analytical feedback policy $u^*(x,t)$ is given by:*
+> 
+> $$u^*(x, t) = -\mathbf{R}^{-1} \mathbf{B}^T \nabla V(x, t) \tag{4}$$
+> 
+> ***Proof.*** Minimizing the Hamiltonian operator with respect to $u \in \mathcal{U}$ yields the continuous stationarity condition $\mathbf{R} u + \mathbf{B}^T \nabla V = 0$. $\quad \blacksquare$
 
-*Proof.* Minimizing the Hamiltonian operator with respect to $u \in \mathcal{U}$ yields the continuous stationarity condition $\mathbf{R} u + \mathbf{B}^T \nabla V = 0$. $\quad \blacksquare$
+</td>
+</tr>
+<tr>
+<td>
 
----
+#### **Theorem 5 (Quantum Hamilton-Jacobi PDE & Bohmian Potential)**
 
-### Theorem 5 (Quantum Hamilton-Jacobi PDE & Bohmian Potential)
-**Theorem 5.** *Substituting the polar wave function $\psi(x,t) = R(x,t) \, e^{i S(x,t)/\hbar}$ into the Schrödinger equation $\hbar i \frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m} \nabla^2 \psi + V(x) \psi$ yields the Quantum Hamilton-Jacobi PDE:*
+> **Theorem 5.** *Substituting the polar wave function $\psi(x,t) = R(x,t) \, e^{i S(x,t)/\hbar}$ into the Schrödinger equation $\hbar i \frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m} \nabla^2 \psi + V(x) \psi$ yields the Quantum Hamilton-Jacobi PDE:*
+> 
+> $$\frac{\partial S}{\partial t} + \frac{|\nabla S|^2}{2m} + V(x) + Q(x) = 0, \quad Q(x) = -\frac{\hbar^2}{2m} \frac{\nabla^2 R(x)}{R(x)} \tag{5}$$
+> 
+> ***Proof.*** Separating real and imaginary components under the WKB limit $\hbar \to 0$ recovers classical action dynamics while $Q(x)$ preserves quantum non-locality. $\quad \blacksquare$
 
-$$\frac{\partial S}{\partial t} + \frac{|\nabla S|^2}{2m} + V(x) + Q(x) = 0, \quad Q(x) = -\frac{\hbar^2}{2m} \frac{\nabla^2 R(x)}{R(x)} \tag{5}$$
-
-*Proof.* Separating real and imaginary components under the WKB limit $\hbar \to 0$ recovers classical action dynamics while $Q(x)$ preserves quantum non-locality. $\quad \blacksquare$
+</td>
+</tr>
+</table>
+</div>
 
 ---
 
