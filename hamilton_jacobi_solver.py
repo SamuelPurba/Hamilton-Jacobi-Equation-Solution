@@ -4,7 +4,6 @@ HAMILTON-JACOBI PDE PERFECT SOLVER & RESEARCH SUITE (SCOPUS Q1 TOP 1% WORLD CLAS
 Author: Samuel Hasiholan Omega Purba, S. Tr. T.
 Prodi Teknik Robotika dan Kecerdasan Buatan, Jurusan Teknik Elektro, Politeknik Negeri Batam
 Founder: BeruangLaut.ID
-Quote: "don't be doubt to be Great" [1 Thessalonians 2:15]
 ====================================================================================================
 """
 
@@ -184,10 +183,6 @@ class MainWindow(QMainWindow):
         header_vbox.addWidget(subtitle_label)
         header_box.addLayout(header_vbox)
         header_box.addStretch()
-        
-        quote_label = QLabel('"don\'t be doubt to be Great" [1 Thessalonians 2:15]')
-        quote_label.setStyleSheet("color: #f59e0b; font-weight: bold;")
-        header_box.addWidget(quote_label)
         
         layout.addLayout(header_box)
 
