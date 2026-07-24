@@ -35,10 +35,6 @@ class HamiltonJacobiEngine:
 
     @staticmethod
     def solve_harmonic_oscillator_analytical(q, t, m=1.0, omega=1.0, E=1.0):
-        """
-        Analytical solution for 1D Harmonic Oscillator Hamilton-Jacobi equation:
-        H(q, p) = p^2 / (2m) + 1/2 m w^2 q^2 = E
-        """
         p_q = np.sqrt(np.maximum(0.0, 2 * m * (E - 0.5 * m * (omega**2) * (q**2))))
         a = np.sqrt(2 * E / (m * omega**2))
         q_clamped = np.clip(q / a, -1.0, 1.0)
@@ -48,11 +44,6 @@ class HamiltonJacobiEngine:
 
     @staticmethod
     def solve_lax_oleinik_variational(x_grid, t, s0_func="abs", m=1.0):
-        """
-        Lax-Oleinik Variational Formula for convex Lagrangian L(v) = 1/2 m v^2:
-        S(x, t) = inf_{y in R} { S_0(y) + t * L((x - y) / t) }
-        Handles shock wave creation and gradient kinks.
-        """
         N = len(x_grid)
         y_grid = np.linspace(x_grid[0] - 5.0, x_grid[-1] + 5.0, 1000)
         
@@ -60,14 +51,13 @@ class HamiltonJacobiEngine:
             S0_y = np.abs(y_grid)
         elif s0_func == "sin":
             S0_y = np.sin(y_grid)
-        else: # quadratic bump
+        else:
             S0_y = np.maximum(0.0, 1.0 - y_grid**2)
 
         S_val = np.zeros(N)
         minimizer_y = np.zeros(N)
 
         for i, x in enumerate(x_grid):
-            # Lagrangian action for trajectory y -> x over time t
             vel = (x - y_grid) / max(1e-4, t)
             L_val = 0.5 * m * (vel**2)
             total_action = S0_y + t * L_val
@@ -75,18 +65,20 @@ class HamiltonJacobiEngine:
             S_val[i] = total_action[idx_min]
             minimizer_y[i] = y_grid[idx_min]
 
-        # Numerical gradient p = dS/dx
         dx = x_grid[1] - x_grid[0]
         p_val = np.gradient(S_val, dx)
         return S_val, p_val, minimizer_y
 
     @staticmethod
-    def solve_eikonal_2d_fmm(grid_size=100, source=(50, 50), obstacle_type="circle"):
+    def solve_eikonal_2d_fmm(grid_size=100, source=None, obstacle_type="circle"):
         """
         Solves 2D Eikonal Hamilton-Jacobi Equation: |grad S|^2 = 1 / f(x, y)^2
         using Fast Sweeping / Viscosity Iteration method for Robot Navigation.
         """
         N = grid_size
+        if source is None:
+            source = (N // 2, N // 2)
+
         dx = 1.0 / N
         S = np.full((N, N), 1e6)
         S[source[0], source[1]] = 0.0
@@ -119,38 +111,29 @@ class HamiltonJacobiEngine:
 
     @staticmethod
     def solve_stochastic_hjb_robotics(grid_size=80, noise_sigma=0.05):
-        """
-        Solves Stochastic Hamilton-Jacobi-Bellman (HJB) for Autonomous Robotics:
-        dV/dt + 1/2 sigma^2 Laplacian(V) + min_u { L(x, u) + grad(V) . f(x, u) } = 0
-        """
         N = grid_size
         dx = 1.0 / N
         V = np.zeros((N, N))
         X, Y = np.meshgrid(np.linspace(-1, 1, N), np.linspace(-1, 1, N))
         
-        # Target state at (0.8, 0.8), Obstacle at (0, 0)
         target = (0.8, 0.8)
         running_cost = (X - target[0])**2 + (Y - target[1])**2 + 2.0 * np.exp(-15.0 * (X**2 + Y**2))
 
-        # Iterative Dynamic Programming / Policy Iteration
         for it in range(40):
             Vy, Vx = np.gradient(V, dx)
-            # Optimal control policy u* = -grad V
             u_x = -Vx
             u_y = -Vy
             u_norm = np.sqrt(u_x**2 + u_y**2) + 1e-6
             u_x = u_x / u_norm
             u_y = u_y / u_norm
             
-            # Second derivative for diffusion (Laplacian)
             Vxx = np.gradient(Vx, dx, axis=1)
             Vyy = np.gradient(Vy, dx, axis=0)
             laplacian = Vxx + Vyy
 
-            # HJB Residual update
             hjb_rhs = running_cost + (Vx * u_x + Vy * u_y) + 0.5 * (noise_sigma**2) * laplacian
             V -= 0.005 * hjb_rhs
-            V[int(0.9*N), int(0.9*N)] = 0.0 # Target boundary condition
+            V[int(0.9*N), int(0.9*N)] = 0.0
 
         return X, Y, V, u_x, u_y
 
@@ -177,7 +160,6 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(main_widget)
         layout = QVBoxLayout(main_widget)
 
-        # Header banner
         header_box = QHBoxLayout()
         title_label = QLabel("⚡ HAMILTON-JACOBI PDE PERFECT SOLVER & RESEARCH SUITE")
         title_label.setFont(QFont("Arial", 16, QFont.Weight.Bold))
@@ -198,7 +180,6 @@ class MainWindow(QMainWindow):
         
         layout.addLayout(header_box)
 
-        # Tabs
         self.tabs = QTabWidget()
         layout.addWidget(self.tabs)
 
