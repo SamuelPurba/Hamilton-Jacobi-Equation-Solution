@@ -92,14 +92,14 @@ graph TD
 
 ---
 
-### 📐 LANDSCAPE MATHEMATICAL THEOREM PROOF PRESENTATION
+<h3 align="center">📐 LANDSCAPE MATHEMATICAL THEOREM PROOF PRESENTATION</h3>
 
 <div align="center">
-<table width="100%">
-<tr>
-<td>
+<table width="100%" style="border-collapse: collapse; margin-top: 15px;">
+<tr style="background-color: #1e293b;">
+<td style="padding: 16px; border: 1px solid #334155;">
 
-#### **Theorem 1 (Crandall-Lions Viscosity Solution Framework)**
+#### 1️⃣ **Theorem 1 (Crandall-Lions Viscosity Solution Framework)**
 
 > **Theorem 1.** *A bounded continuous function $S \in C(\mathbb{R}^d \times [0, T])$ is defined as a **Viscosity Solution** of the Hamilton-Jacobi equation if for every test function $\phi, \psi \in C^1(\mathbb{R}^d \times (0, T))$:*
 > 
@@ -113,10 +113,10 @@ graph TD
 
 </td>
 </tr>
-<tr>
-<td>
+<tr style="background-color: #0f172a;">
+<td style="padding: 16px; border: 1px solid #334155;">
 
-#### **Theorem 2 (Lax-Oleinik Variational Representation & Legendre Duality)**
+#### 2️⃣ **Theorem 2 (Lax-Oleinik Variational Representation & Legendre Duality)**
 
 > **Theorem 2.** *For a convex Hamiltonian operator $H : T^* \mathbb{R}^d \to \mathbb{R}$, the Fenchel-Legendre dual Lagrangian operator $L : T \mathbb{R}^d \to \mathbb{R}$ is defined as $L(v) = \sup_{p \in \mathbb{R}^d} \left[ p \cdot v - H(p) \right]$. The unique viscosity solution $S(x, t) \in C(\mathbb{R}^d \times [0, T])$ is given by the infimal convolution:*
 > 
@@ -126,10 +126,10 @@ graph TD
 
 </td>
 </tr>
-<tr>
-<td>
+<tr style="background-color: #1e293b;">
+<td style="padding: 16px; border: 1px solid #334155;">
 
-#### **Theorem 3 (Stochastic Hamilton-Jacobi-Bellman Formulation for Robotics)**
+#### 3️⃣ **Theorem 3 (Stochastic Hamilton-Jacobi-Bellman Formulation for Robotics)**
 
 > **Theorem 3.** *Under stochastic Brownian drift dynamics $d x_t = f(x_t, u_t) \, dt + \sigma \, dW_t$ with state trajectory $x_t \in \mathbb{R}^d$, control $u_t \in \mathcal{U}$, standard Wiener process $W_t \in \mathbb{R}^d$, and noise volatility $\sigma > 0$, the optimal cost-to-go value function $V : \mathbb{R}^d \times [0, T] \to \mathbb{R}$ satisfies the 2nd-order non-linear PDE:*
 > 
@@ -139,10 +139,10 @@ graph TD
 
 </td>
 </tr>
-<tr>
-<td>
+<tr style="background-color: #0f172a;">
+<td style="padding: 16px; border: 1px solid #334155;">
 
-#### **Theorem 4 (Closed-Loop Optimal Feedback Control Policy)**
+#### 4️⃣ **Theorem 4 (Closed-Loop Optimal Feedback Control Policy)**
 
 > **Theorem 4.** *For control-affine dynamic systems $f(x,u) = f_0(x) + \mathbf{B} u$ with uncontrolled drift field $f_0 : \mathbb{R}^d \to \mathbb{R}^d$, control matrix $\mathbf{B} \in \mathbb{R}^{d \times m}$, and quadratic control cost $\frac{1}{2} u^T \mathbf{R} u$, the analytical feedback policy $u^* : \mathbb{R}^d \times [0, T] \to \mathcal{U}$ is given by:*
 > 
@@ -152,10 +152,10 @@ graph TD
 
 </td>
 </tr>
-<tr>
-<td>
+<tr style="background-color: #1e293b;">
+<td style="padding: 16px; border: 1px solid #334155;">
 
-#### **Theorem 5 (Quantum Hamilton-Jacobi PDE & Bohmian Potential)**
+#### 5️⃣ **Theorem 5 (Quantum Hamilton-Jacobi PDE & Bohmian Potential)**
 
 > **Theorem 5.** *Substituting the polar wave function $\psi(x,t) = R(x,t) \, e^{i S(x,t)/\hbar}$ into the Schrödinger equation $\hbar i \frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m} \nabla^2 \psi + V(x) \psi$ yields the Quantum Hamilton-Jacobi PDE with Bohmian Quantum Potential $Q : \mathbb{R}^d \to \mathbb{R}$:
 > 
