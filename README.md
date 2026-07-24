@@ -41,11 +41,16 @@
 
 ## I. INTRODUCTION & THEORETICAL FORMULATION
 
-The Hamilton-Jacobi equation serves as a foundational pinnacle bridging classical Hamiltonian dynamics, quantum field theory, optimal control theory, and geometric optics:
+The non-linear first-order Hamilton-Jacobi Partial Differential Equation serves as a foundational pinnacle bridging classical Hamiltonian dynamics, quantum field theory, optimal control theory, and geometric optics:
 
-$$\frac{\partial S(q, t)}{\partial t} + H\left(q, \frac{\partial S}{\partial q}, t\right) = 0, \quad S(q, 0) = S_0(q) \tag{1}$$
+$$\frac{\partial S(q, t)}{\partial t} + H\left(q, \, \frac{\partial S(q, t)}{\partial q}, \, t\right) = 0, \quad \text{with initial condition } S(q, 0) = S_0(q) \tag{1}$$
 
-where $S(q, t) \in C^1(\mathbb{R}^d \times [0, T])$ denotes **Hamilton's Principal Action**, $q \in \mathbb{R}^d$ represents the generalized state vector, $p = \nabla_q S$ denotes generalized momentum, and $H(q, p, t)$ is the system Hamiltonian.
+### Mathematical Variable & Operator Specifications:
+* **$S(q, t) \in C^1(\mathbb{R}^d \times [0, T])$**: Hamilton's Principal Action field on the configuration-time manifold.
+* **$q \in \mathbb{R}^d$**: Generalized configuration coordinate state vector.
+* **$p = \nabla_q S = \frac{\partial S}{\partial q} \in \mathbb{R}^d$**: Generalized canonical momentum vector field.
+* **$H(q, p, t) : T^* \mathbb{R}^d \times [0, T] \to \mathbb{R}$**: System Hamiltonian energy functional operator.
+* **$S_0(q)$**: Initial action condition defined on the Cauchy boundary at $t = 0$.
 
 ---
 
