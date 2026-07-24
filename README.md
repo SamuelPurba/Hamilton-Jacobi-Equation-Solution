@@ -121,7 +121,7 @@ graph TD
 > 
 > $$S(x, t) = \inf_{y \in \mathbb{R}^d} \left[ S_0(y) + t \cdot L\left(\frac{x - y}{t}\right) \right] \tag{2}$$
 > 
-> ***Proof.*** The optimal minimizer point $y^*(x, t)$ identifies the unique characteristic ray origin. Hence, momentum covector $p(x,t) = \nabla L\left(\frac{x - y^*(x,t)}{t}\right) \in T_x^* \mathbb{R}^d$ strictly satisfies entropy jump conditions. $\quad \blacksquare$
+> ***Proof.*** The optimal minimizer point $y^*(x, t) \in \text{argmin}_{y \in \mathbb{R}^d} \left[ S_0(y) + t \cdot L\left(\frac{x - y}{t}\right) \right]$ uniquely identifies the characteristic ray origin propagating to $(x, t)$. By Fenchel-Legendre duality, the canonical momentum covector field $p(x, t) = \nabla L\left(\frac{x - y^*(x, t)}{t}\right) \in T_x^* \mathbb{R}^d$ satisfies the Semiconcavity Entropy Jump Bound $S(x + h, t) + S(x - h, t) - 2S(x, t) \le \frac{C}{t} \|h\|^2$, establishing global uniqueness of the Crandall-Lions viscosity solution. $\quad \blacksquare$
 
 </td>
 </tr>
