@@ -44,11 +44,11 @@
 The non-linear first-order Hamilton-Jacobi Partial Differential Equation serves as a foundational pinnacle bridging classical Hamiltonian dynamics, quantum field theory, optimal control theory, and geometric optics.
 
 ### Mathematical Variable & Operator Specifications:
-* **$S(q, t) \in C(\mathbb{R}^d \times [0, T])$**: Hamilton's Principal Action field defined on the continuous configuration-time domain space.
-* **$q \in \mathbb{R}^d$**: Generalized configuration coordinate state vector.
-* **$p = \nabla_q S = \frac{\partial S}{\partial q} \in \mathbb{R}^d$**: Generalized canonical momentum vector field.
-* **$H(q, p, t) : T^* \mathbb{R}^d \times [0, T] \to \mathbb{R}$**: System Hamiltonian energy functional operator.
-* **$S_0(q)$**: Initial action condition defined on the Cauchy boundary at $t = 0$.
+* **$S : \mathbb{R}^d \times [0, T] \to \mathbb{R}$**: Hamilton's Principal Action scalar field defined on the continuous configuration-time domain manifold $C(\mathbb{R}^d \times [0, T])$.
+* **$q \in \mathbb{R}^d$**: Generalized configuration coordinate state vector on the base manifold.
+* **$p = \nabla_q S = \frac{\partial S}{\partial q} \in T_q^* \mathbb{R}^d$**: Generalized canonical momentum covector field on the cotangent fiber.
+* **$H : T^* \mathbb{R}^d \times [0, T] \to \mathbb{R}$**: System Hamiltonian energy functional operator defined on the cotangent bundle $T^* \mathbb{R}^d$.
+* **$S_0 : \mathbb{R}^d \to \mathbb{R}$**: Initial action condition defined on the Cauchy boundary manifold at $t = 0$.
 
 ---
 
@@ -119,7 +119,7 @@ graph TD
 
 #### **Theorem 2 (Lax-Oleinik Variational Representation & Legendre Duality)**
 
-> **Theorem 2.** *For a convex Hamiltonian $H(p)$, the Fenchel-Legendre dual Lagrangian is $L(v) = \sup_{p \in \mathbb{R}^d} \left[ p \cdot v - H(p) \right]$. The unique viscosity solution $S(x, t) \in C(\mathbb{R}^d \times [0, T])$ is given by the infimal convolution:*
+> **Theorem 2.** *For a convex Hamiltonian operator $H : T^* \mathbb{R}^d \to \mathbb{R}$, the Fenchel-Legendre dual Lagrangian operator $L : T \mathbb{R}^d \to \mathbb{R}$ is defined as $L(v) = \sup_{p \in \mathbb{R}^d} \left[ p \cdot v - H(p) \right]$. The unique viscosity solution $S(x, t) \in C(\mathbb{R}^d \times [0, T])$ is given by the infimal convolution:*
 > 
 > $$S(x, t) = \inf_{y \in \mathbb{R}^d} \left[ S_0(y) + t \cdot L\left(\frac{x - y}{t}\right) \right] \tag{2}$$
 > 
@@ -132,7 +132,7 @@ graph TD
 
 #### **Theorem 3 (Stochastic Hamilton-Jacobi-Bellman Formulation for Robotics)**
 
-> **Theorem 3.** *Under stochastic Brownian drift $dx_t = f(x_t, u_t) \, dt + \sigma \, dW_t$, the optimal cost-to-go value function $V(x, t) \in C^2(\mathbb{R}^d \times [0, T])$ satisfies the 2nd-order non-linear PDE:*
+> **Theorem 3.** *Under stochastic Brownian drift $dx_t = f(x_t, u_t) \, dt + \sigma \, dW_t$, the optimal cost-to-go value function $V : \mathbb{R}^d \times [0, T] \to \mathbb{R}$ satisfies the 2nd-order non-linear PDE:*
 > 
 > $$\frac{\partial V(x, t)}{\partial t} + \frac{1}{2} \sigma^2 \Delta V(x, t) + \min_{u \in \mathcal{U}} \left[ L(x, u) + \nabla V(x, t) \cdot f(x, u) \right] = 0 \tag{3}$$
 > 
@@ -145,7 +145,7 @@ graph TD
 
 #### **Theorem 4 (Closed-Loop Optimal Feedback Control Policy)**
 
-> **Theorem 4.** *For control-affine dynamic systems $f(x,u) = f_0(x) + \mathbf{B}u$ with quadratic control cost $\frac{1}{2} u^T \mathbf{R} u$, the analytical feedback policy $u^*(x,t)$ is given by:*
+> **Theorem 4.** *For control-affine dynamic systems $f(x,u) = f_0(x) + \mathbf{B}u$ with quadratic control cost $\frac{1}{2} u^T \mathbf{R} u$, the analytical feedback policy $u^* : \mathbb{R}^d \times [0, T] \to \mathcal{U}$ is given by:*
 > 
 > $$u^*(x, t) = -\mathbf{R}^{-1} \mathbf{B}^T \nabla V(x, t) \tag{4}$$
 > 
@@ -158,7 +158,7 @@ graph TD
 
 #### **Theorem 5 (Quantum Hamilton-Jacobi PDE & Bohmian Potential)**
 
-> **Theorem 5.** *Substituting the polar wave function $\psi(x,t) = R(x,t) \, e^{i S(x,t)/\hbar}$ into the Schrödinger equation $\hbar i \frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m} \nabla^2 \psi + V(x) \psi$ yields the Quantum Hamilton-Jacobi PDE:*
+> **Theorem 5.** *Substituting the polar wave function $\psi(x,t) = R(x,t) \, e^{i S(x,t)/\hbar}$ into the Schrödinger equation $\hbar i \frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m} \nabla^2 \psi + V(x) \psi$ yields the Quantum Hamilton-Jacobi PDE with Bohmian Quantum Potential $Q : \mathbb{R}^d \to \mathbb{R}$:
 > 
 > $$\frac{\partial S}{\partial t} + \frac{|\nabla S|^2}{2m} + V(x) + Q(x) = 0, \quad Q(x) = -\frac{\hbar^2}{2m} \frac{\nabla^2 R(x)}{R(x)} \tag{5}$$
 > 
