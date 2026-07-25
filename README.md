@@ -15,7 +15,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Scopus-Q1%20Top%201%25%20World%20Class-gold.svg?style=for-the-badge&logo=scopus" alt="Scopus Q1 Top 1% World Class">
-  <img src="https://img.shields.io/badge/Scopus%20Q1-Hamilton%20Jacobi%20PDE-ff4500.svg?style=for-the-badge&logo=scopus" alt="Scopus Q1 Hamilton Jacobi PDE">
+  <img src="https://img.shields.io/badge/Scopus%20Q1-Top%201%25%20World%20Class-gold.svg?style=for-the-badge&logo=scopus" alt="Scopus Q1 Top 1% World Class">
   <img src="https://img.shields.io/badge/Journal--Grade-Elsevier%20%7C%20IEEE%20Standard-blue.svg?style=for-the-badge" alt="Elsevier IEEE Standard">
   <img src="https://img.shields.io/badge/Precision-100%25%20Verified-emerald.svg?style=for-the-badge" alt="100% Verified">
   <img src="https://img.shields.io/badge/Engine-Sub--ms%20Compute-purple.svg?style=for-the-badge" alt="Sub-ms Compute Engine">
