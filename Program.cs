@@ -12,7 +12,8 @@ namespace HamiltonJacobiEngine
         static void Main(string[] args)
         {
             int port = 8080;
-            if (args.Length > 0 && int.TryParse(args[0], out int customPort))
+            int customPort;
+            if (args.Length > 0 && int.TryParse(args[0], out customPort))
             {
                 port = customPort;
             }
@@ -63,7 +64,7 @@ namespace HamiltonJacobiEngine
                     Process.Start(new ProcessStartInfo
                     {
                         FileName = "cmd",
-                        Arguments = $"/c start http://localhost:{port}/",
+                        Arguments = "/c start http://localhost:" + port + "/",
                         CreateNoWindow = true,
                         UseShellExecute = false
                     });
@@ -79,8 +80,8 @@ namespace HamiltonJacobiEngine
             try
             {
                 HttpListener listener = new HttpListener();
-                listener.Prefixes.Add($"http://localhost:{port}/");
-                listener.Prefixes.Add($"http://127.0.0.1:{port}/");
+                listener.Prefixes.Add("http://localhost:" + port + "/");
+                listener.Prefixes.Add("http://127.0.0.1:" + port + "/");
                 listener.Start();
 
                 while (true)
@@ -92,7 +93,7 @@ namespace HamiltonJacobiEngine
             catch (Exception ex)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"[ERROR] HttpListener exception: {ex.Message}");
+                Console.WriteLine("[ERROR] HttpListener exception: " + ex.Message);
                 Console.ResetColor();
             }
         }
@@ -126,7 +127,7 @@ namespace HamiltonJacobiEngine
             catch (Exception ex)
             {
                 response.StatusCode = 500;
-                byte[] errBytes = Encoding.UTF8.GetBytes($"500 Server Error: {ex.Message}");
+                byte[] errBytes = Encoding.UTF8.GetBytes("500 Server Error: " + ex.Message);
                 response.OutputStream.Write(errBytes, 0, errBytes.Length);
             }
             finally
