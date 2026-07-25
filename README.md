@@ -38,8 +38,8 @@ Repositori ini menyajikan **formalisasi akademis berstandar Scopus Q1** untuk **
 Persamaan Hamilton-Jacobi menghubungkan Fungsi Aksi Utama Hamilton $S(q, t)$ dengan Hamiltonian Sistem $H(q, p, t)$:
 $$\frac{\partial S}{\partial t} + H\left(q, \frac{\partial S}{\partial q}, t\right) = 0$$
 
-Untuk medan potensial eksponensial dengan integrasi eksak Teorema Sophomore's Dream:
-$$V(q) = (x-y)^n + \int_{0}^{1} x^x \, dx, \quad \int_{0}^{1} x^x \, dx = \sum_{m=1}^{\infty} \frac{(-1)^{m-1}}{m^m} = 1 - \frac{1}{4} + \frac{1}{27} - \frac{1}{256} + \dots \approx 0.783430510712134$$
+Untuk medan potensial eksponensial:
+$$V(q) = (x-y)^n + \int_{0}^{1} x^x \, dx$$
 
 Fungsi Aksi Hamilton yang memenuhi identitas PDE tanpa residu adalah:
 $$S(q, t) = \frac{1}{2} m \left(\frac{q}{t}\right)^2 t - V(q) e^{-\alpha t}$$
