@@ -25,7 +25,11 @@ function assert(condition, testName) {
 
 // PILLAR 1: REPOSITORY ASSETS & FILES INTEGRITY
 console.log("\n--- PILLAR 1: Repository Assets & Document Integrity ---");
-const requiredFiles = ['index.html', 'style.css', 'app.js', 'Program.cs', 'README.md', 'CITATION.cff', 'LICENSE', '.gitignore', 'Hamilton-Jacobi Equation Exact Analytical Solution Application.pdf'];
+const requiredFiles = [
+    'index.html', 'style.css', 'app.js', 'Program.cs', 'README.md', 'CITATION.cff', 'LICENSE', '.gitignore',
+    'Hamilton-Jacobi Equation Exact Analytical Solution Application.pdf',
+    'Hamilton-Jacobi Equation Exact Analytical Solution Application.docx'
+];
 requiredFiles.forEach(file => {
     assert(fs.existsSync(file), `File '${file}' exists and is ready for GitHub release`);
 });
