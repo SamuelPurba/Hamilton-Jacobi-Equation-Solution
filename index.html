@@ -95,14 +95,14 @@
 
                     <div class="hamilton-card hamilton-card-gold">
                         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
-                            <h4 style="margin: 0; font-size: 1.05rem; color: #38bdf8;">🎯 Hamilton-Jacobi-Bellman (HJB) Optimal Control</h4>
-                            <span class="scopus-tag" style="font-size: 0.65rem; padding: 0.2rem 0.5rem; background: linear-gradient(135deg, #38bdf8, #0284c7); color: #fff;">HJB CONTROL</span>
+                            <h4 style="margin: 0; font-size: 1.05rem; color: #38bdf8;">⚡ Persamaan Diferensial Parsial Fundamental Hamilton-Jacobi</h4>
+                            <span class="scopus-tag" style="font-size: 0.65rem; padding: 0.2rem 0.5rem; background: linear-gradient(135deg, #38bdf8, #0284c7); color: #fff;">HJE FORMULATION</span>
                         </div>
                         <div class="formula-math" style="background: rgba(10,15,28,0.8); border: 1px solid var(--border-color); padding: 0.85rem; border-radius: 10px; margin-bottom: 0.75rem;">
-                            $$u^*(t) = -\frac{1}{m} \nabla S(q,t) = -\frac{1}{m} \frac{\partial S}{\partial q}$$
+                            $$\frac{\partial S}{\partial t} + H\left(q, \frac{\partial S}{\partial q}, t\right) = 0$$
                         </div>
                         <p style="font-size: 0.82rem; color: var(--text-secondary); margin: 0; line-height: 1.4;">
-                            Gaya kendali umpan balik optimal $u^*(t)$ menjamin minimalisasi aksi Lagrange $\int \mathcal{L} dt$ dengan kecepatan eksekusi sub-milidetik ($<0.01\text{ ms}$).
+                            Formulasi fundamental Persamaan Diferensial Parsial Hamilton-Jacobi (HJE) yang menghubungkan turunan parsial waktu aksi $\frac{\partial S}{\partial t}$ dan Hamiltonian sistem $H(q, p, t)$ dengan kecepatan eksekusi sub-milidetik ($<0.01\text{ ms}$).
                         </p>
                     </div>
                 </div>

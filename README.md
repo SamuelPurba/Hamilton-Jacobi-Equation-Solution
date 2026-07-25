@@ -51,15 +51,15 @@ $$p = \frac{\partial S}{\partial q} = m \dot{q} = m \left(\frac{q}{t}\right)$$
 Total Energi Hamiltonian $H(q, p)$ dirumuskan melalui Transformasi Legendre:
 $$H(q, p) = p \cdot \dot{q} - \mathcal{L}(q, \dot{q}) = \frac{p^2}{2m} + V(q) e^{-\alpha t}$$
 
-### 3. Teorema Kendali Optimal Hamilton-Jacobi-Bellman (HJB)
-Hukum umpan balik gaya kendali optimal $u^*(t)$ yang meminimalkan indeks performa energi sistem robotika dinamis dirumuskan sebagai:
-$$u^*(t) = -\frac{1}{m} \nabla S(q, t) = -\frac{1}{m} p(t)$$
+### 3. Formulasi Persamaan Diferensial Parsial Fundamental Hamilton-Jacobi (HJE)
+Persamaan fundamental diferensial parsial Hamilton-Jacobi yang menghubungkan laju perubahan aksi utama $S(q, t)$ terhadap waktu dan momentum kanonikal $p = \frac{\partial S}{\partial q}$ dirumuskan sebagai:
+$$\frac{\partial S}{\partial t} + H\left(q, \frac{\partial S}{\partial q}, t\right) = 0$$
 
 ```mermaid
 graph LR
     HJE["Hamilton-Jacobi PDE: dS/dt + H = 0"] --> LEGENDRE["Legendre Transform & Canonical Momentum p"]
     LEGENDRE --> ENERGY["Total Energy Conservation H(q,p) = E"]
-    ENERGY --> HJB_CONTROL["HJB Optimal Control Force u*(t)"]
+    ENERGY --> HJB_CONTROL["Fundamental HJE Formula Solved"]
     HJB_CONTROL --> SUB_MS["Sub-Millisecond Engine Exec (<0.01 ms)"]
 ```
 
@@ -69,8 +69,8 @@ graph LR
 
 | Fitur | Spesifikasi Akademis Scopus Q1 |
 | :--- | :--- |
-| ⚡ **Hamilton-Jacobi PDE Solver** | Formulasi Persamaan Diferensial Parsial $dS/dt + H(q, p, t) = 0$ dengan garansi **Zero Residual Identity**. |
-| 🎯 **HJB Optimal Control** | Gaya Kendali Umpan Balik $u^*(t) = -\frac{1}{m} \nabla S(q,t)$ untuk stabilitas dinamika robotika. |
+| ⚡ **Hamilton-Jacobi PDE Solver** | Formulasi Persamaan Diferensial Parsial $\frac{\partial S}{\partial t} + H\left(q, \frac{\partial S}{\partial q}, t\right) = 0$ dengan garansi **Zero Residual Identity**. |
+| 🎯 **HJE Exact Formulation** | Solusi Eksak Persamaan Diferensial Parsial $\frac{\partial S}{\partial t} + H\left(q, \frac{\partial S}{\partial q}, t\right) = 0$ untuk stabilitas dinamika sistem. |
 | 📈 **Phase-Space Orbit Diagram** | Simulator interaktif lintasan posisi vs momentum kanonikal $(q, p)$ berbasis Canvas Chart.js. |
 | ⏱️ **Sub-Millisecond Speed** | Kecepatan eksekusi komputasi sub-milidetik ($<0.01\text{ ms}$) dalam lingkungan runtime Node.js & C#. |
 | 📜 **Journal-Grade Citation** | Siap dikutip dalam publikasi berstandar Elsevier, IEEE, dan Scopus Q1. |
