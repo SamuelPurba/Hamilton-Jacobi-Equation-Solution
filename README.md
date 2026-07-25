@@ -86,7 +86,7 @@ graph LR
     </td>
     <td valign="top">
       <h3>Samuel Hasiholan Omega, S. Tr. T.</h3>
-      <p><strong>Pencetus Solusi Persamaan Hamilton-Jacobi</strong></p>
+      <p><strong>Pencetus Solusi Persamaan Hamilton-Jacobi Exact Solution</strong></p>
       <p>🎓 Gelar Akademis: <em>Sarjana Teknik Terapan (S. Tr. T.)</em><br>
       🤖 Program Studi: <em>Teknik Robotika dan Kecerdasan Buatan (A . I)</em><br>
       🏫 Institusi: <em>Politeknik Negeri Batam, Kepulauan Riau, Indonesia</em></p>
