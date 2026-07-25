@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software, analytical engine, or paper framework in your research, please cite it as below."
+authors:
+  - family-names: "Purba"
+    given-names: "Samuel Hasiholan Omega"
+    title: "S. Tr. T."
+    affiliation: "Politeknik Negeri Batam - Department of Electrical Engineering, Robotics & Artificial Intelligence Engineering Program"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+title: "Hamilton-Jacobi Equation Solution: Scopus Q1 Top 1% World-Class Analytical Engine & Exact PDE Framework"
+version: "1.0.0"
+date-released: "2026-07-25"
+url: "https://github.com/SamuelPurba/Hamilton-Jacobi-Equation-Solution"
+repository-code: "https://github.com/SamuelPurba/Hamilton-Jacobi-Equation-Solution"
+keywords:
+  - "Hamilton-Jacobi Equation Solution"
+  - "Partial Differential Equations PDE"
+  - "Hamilton-Jacobi-Bellman HJB Control"
+  - "Canonical Momentum & Legendre Transform"
+  - "Analytical Mechanics & Robotics Engineering"
+  - "Politeknik Negeri Batam"
+license: "MIT"
