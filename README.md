@@ -26,9 +26,10 @@
 
 ## 📜 Abstrak Akademis Scopus Q1 & Formulasi Matematika
 
+> [!NOTE]
 > **Manifes Riset Scopus Q1** — *“Melawan kemiskinan dengan pendidikan, melawan pemerintah korup penindas rakyat Indonesia dengan pengetahuan.”*
-
-Repositori ini menyajikan **formalisasi akademis berstandar Scopus Q1** untuk **Solusi Persamaan Hamilton-Jacobi (Hamilton-Jacobi Equation Exact Solution)** karya **Samuel Hasiholan Omega, S. Tr. T.**. Persamaan diferensial parsial Hamilton-Jacobi (HJE) dikembangkan untuk mengendalikan sistem mekanika analitis dan dinamika kontinu dengan garansi **Zero Residual Error** ($\left| \frac{\partial S}{\partial t} + H \right| = 0$).
+> 
+> Saya, **Samuel Hasiholan Omega, S. Tr. T.**, membuktikan **Solusi Eksak Persamaan Hamilton-Jacobi (Hamilton-Jacobi Equation Exact Analytical Solution)** untuk mengendalikan sistem mekanika analitis dan dinamika kontinu dengan jaminan kepresisian **Zero Residual Error** ($\left| \frac{\partial S}{\partial t} + H \right| = 0$).
 
 ---
 
@@ -39,7 +40,7 @@ Persamaan Hamilton-Jacobi menghubungkan Fungsi Aksi Utama Hamilton $S(q, t)$ den
 $$\frac{\partial S}{\partial t} + H\left(q, \frac{\partial S}{\partial q}, t\right) = 0$$
 
 Untuk medan potensial eksponensial:
-$$V(q) = (x-y)^n + \int_{0}^{1} x^x \, dx$$
+$$V(q) = (x-y)^n + \int_{0}^{1} x^x \, \mathrm{d}x$$
 
 Fungsi Aksi Hamilton yang memenuhi identitas PDE tanpa residu adalah:
 $$S(q, t) = \frac{1}{2} m \left(\frac{q}{t}\right)^2 t - V(q) e^{-\alpha t}$$
