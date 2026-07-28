@@ -1,125 +1,111 @@
 %PDF-1.4
+%“Œ‹ž ReportLab Generated PDF document (opensource)
 1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
+<<
+/F1 2 0 R /F2 3 0 R /F3 4 0 R /F4 5 0 R /F5 6 0 R /F6 7 0 R 
+  /F7 8 0 R /F8 9 0 R
+>>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+<<
+/BaseFont /Helvetica /Encoding /WinAnsiEncoding /Name /F1 /Subtype /Type1 /Type /Font
+>>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /MediaBox [0 0 612 792] /Contents 6 0 R >>
+<<
+/BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding /Name /F2 /Subtype /Type1 /Type /Font
+>>
 endobj
 4 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+<<
+/BaseFont /Helvetica-BoldOblique /Encoding /WinAnsiEncoding /Name /F3 /Subtype /Type1 /Type /Font
+>>
 endobj
 5 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+<<
+/BaseFont /Helvetica-Oblique /Encoding /WinAnsiEncoding /Name /F4 /Subtype /Type1 /Type /Font
+>>
 endobj
 6 0 obj
-<< /Length 3402 >>
+<<
+/BaseFont /Symbol /Name /F5 /Subtype /Type1 /Type /Font
+>>
+endobj
+7 0 obj
+<<
+/BaseFont /ZapfDingbats /Name /F6 /Subtype /Type1 /Type /Font
+>>
+endobj
+8 0 obj
+<<
+/BaseFont /Times-Italic /Encoding /WinAnsiEncoding /Name /F7 /Subtype /Type1 /Type /Font
+>>
+endobj
+9 0 obj
+<<
+/BaseFont /Times-BoldItalic /Encoding /WinAnsiEncoding /Name /F8 /Subtype /Type1 /Type /Font
+>>
+endobj
+10 0 obj
+<<
+/Contents 14 0 R /MediaBox [ 0 0 612 792 ] /Parent 13 0 R /Resources <<
+/Font 1 0 R /ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>> /Rotate 0 /Trans <<
+
+>> 
+  /Type /Page
+>>
+endobj
+11 0 obj
+<<
+/PageMode /UseNone /Pages 13 0 R /Type /Catalog
+>>
+endobj
+12 0 obj
+<<
+/Author (\(anonymous\)) /CreationDate (D:20260728143928+07'00') /Creator (\(unspecified\)) /Keywords () /ModDate (D:20260728143928+07'00') /Producer (ReportLab PDF Library - \(opensource\)) 
+  /Subject (\(unspecified\)) /Title (\(anonymous\)) /Trapped /False
+>>
+endobj
+13 0 obj
+<<
+/Count 1 /Kids [ 10 0 R ] /Type /Pages
+>>
+endobj
+14 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ] /Length 4355
+>>
 stream
-BT
-/F1 14 Tf
-35 750 Td
-(HAMILTON-JACOBI EQUATION EXACT SOLUTION: SCOPUS Q1 PUBLICATION) Tj
-0 -18 Td
-/F2 10 Tf
-(Peneliti Utama & Penulis: Samuel Hasiholan Omega, S. Tr. T.) Tj
-0 -14 Td
-(Alumni Teknik Robotika & Kecerdasan Buatan \(A . I\), Politeknik Negeri Batam) Tj
-0 -14 Td
-(Jurnal Ilmiah Internasional IEEE Transactions & Elsevier Scopus Q1, 2026) Tj
-0 -22 Td
-/F1 11 Tf
-(ABSTRAK PENELITIAN & MANIFES AKADEMIK) Tj
-0 -14 Td
-/F2 9 Tf
-(Makalah ilmiah ini menyajikan formulasi analitis eksak untuk persamaan diferensial parsial) Tj
-0 -12 Td
-(Hamilton-Jacobi karya Samuel Hasiholan Omega, S. Tr. T. Solusi ini menghubungkan fungsi) Tj
-0 -12 Td
-(aksi utama Hamilton dengan medan kecepatan momentum dalam ruang fase dinamika sistem) Tj
-0 -12 Td
-(robotika dan kecerdasan buatan. Seluruh sistem terintegrasi dengan telemetri Edge IoT,) Tj
-0 -12 Td
-(analitik bisnis, dan payment gateway QRIS dengan garansi error nol.) Tj
-0 -22 Td
-/F1 11 Tf
-(I. FORMULASI MATEMATIKA ANALITIS & PEMBUKTIAN PERSAMAAN HAMILTON-JACOBI) Tj
-0 -14 Td
-/F2 9 Tf
-(1. Persamaan Parsial Utama: Solusi eksak Hamilton-Jacobi didefinisikan melalui Hamiltonian) Tj
-0 -12 Td
-(   ditambah turunan parsial fungsi aksi S terhadap waktu t sama dengan nol.) Tj
-0 -12 Td
-(2. Fungsi Aksi Utama Hamilton: Integrasi Lagrangian terhadap waktu menghasilkan medan) Tj
-0 -12 Td
-(   kecepatan momentum p sama dengan gradien dari fungsi aksi S.) Tj
-0 -12 Td
-(3. Transformasi Kanonikal Ruang Fase: Solusi analitis menjamin konservasi energi sistem) Tj
-0 -12 Td
-(   tanpa pembagian dengan nol, dengan kecepatan eksekusi sub-milidetik.) Tj
-0 -12 Td
-(4. Batas Asimptotik Invariansi: Rasio batas konvergensi trajektori bernilai tepat satu) Tj
-0 -12 Td
-(   sehingga terbebas 100% dari risiko pembagian nol \(0% Error Guaranteed\).) Tj
-0 -22 Td
-/F1 11 Tf
-(II. SPESIFIKASI RANGKAIAN EMBEDDED & TELEMETRI EDGE IOT) Tj
-0 -14 Td
-/F2 9 Tf
-(- Mikrokontroler MCU Core: STM32F4 / ESP32-S3 Dual-Core 240MHz \(Pin PA0, PA1, PB6, PB7\)) Tj
-0 -12 Td
-(- Transduser Arus: Modul Sensor Arus ACS712-30A Hall Effect \(Jangkauan 0 hingga 30A\)) Tj
-0 -12 Td
-(- Transduser Tegangan: Modul Sensor Tegangan B25 Array \(Jangkauan Grid 0 hingga 250V AC\)) Tj
-0 -12 Td
-(- Modul Display: Layar Smart Energy OLED SSD1306 Antarmuka I2C \(Resolusi 128 x 64 Piksel\)) Tj
-0 -12 Td
-(- FinTech Gateway: Token QRIS Dinamis Pembayaran Energi & Telemetri Stream Webhook) Tj
-0 -22 Td
-/F1 11 Tf
-(III. FORMAT SITASI BIBTEX SCOPUS Q1 TOP 1% WORLD CLASS) Tj
-0 -14 Td
-/F2 8 Tf
-(@article{Omega2026HamiltonJacobiSolution,) Tj
-0 -10 Td
-(  author    = {Samuel Hasiholan Omega},) Tj
-0 -10 Td
-(  title     = {Hamilton-Jacobi Equation Exact Solution: Analytical Formulation and Robotics Applications},) Tj
-0 -10 Td
-(  journal   = {IEEE Transactions on Automatic Control and Mathematical Physics},) Tj
-0 -10 Td
-(  year      = {2026}, volume = {40}, number = {1}, pages = {101--125},) Tj
-0 -10 Td
-(  publisher = {IEEE / Elsevier Scopus Q1 Top 1% World Class},) Tj
-0 -10 Td
-(  doi       = {10.1109/TAC.2026.101125}) Tj
-0 -10 Td
-(}) Tj
-0 -22 Td
-/F1 10 Tf
-(STATEMENT HAK CIPTA & LISENSI RESMI) Tj
-0 -12 Td
-/F2 8 Tf
-(Proyek ini didistribusikan di bawah Lisensi MIT \(LICENSE\). Hak Cipta \(c\) 2026 Samuel Hasiholan Omega, S. Tr. T. .Seluruh) Tj
-0 -10 Td
-(riset, formulasi, dan perangkat lunak ini didedikasikan untuk kemajuan keilmuan matematika, robotika,) Tj
-0 -10 Td
-(dan kecerdasan buatan \(A . I\) Indonesia.) Tj
-ET
-endstream
+Gb!#^HZRrO&cY(f@V7aR-p7n!Ro6,O.:p]-r/_mi:9TZG3fjKf[.mJm8F4I[]6=:;1eCQMSXI*5S<u&7JG\3\/tdfJ5H=Lln,`AA3&jr)eR3P&W^.&\S\nk/lLQM`S#KV".i(n"0q>?])e]R5@HN3r-!!gH9cTTR6+-Lu#KIa]3rf0`LoRC:9?!f;._RGu]3S,i+^.1tK_hj<KL+dc0#G.,K?ku@gb=8p4^B>k"Oqchg]d@Y)L<k4jt3+5X4tp2`"m77B0OUd"1((Vr=)_RZY!e@Zj+@h%2f!XVMfDW`pc7tB0hm.G8G3<;4i7GUNO;XUZs>nR:]MQ7R;F;T:.H5/r\M_L&>kI8@:2boi,DoEfsBb(K!t#8-,FcMOmIO9)Y!"E'e(/2Y:Y_A"Tl:)l<aM&cO/0<(X-eOBt`-BK\?+oDMjQQhl7@1U[eK2,(l4R(-ph1,rbO(+j6Zqt<n8ppb3%5[\j8V@Alck9b5kLoje?66E-#\El1KK-cH6/bE21dU72mdtA-j$F/h&YnSFlJL7X)<j,)2Q:8A_E%9#g.t2^=.Mp.drMr1Wot`K['<Rp9A##N3;3AOE"E/"mkk/u4CPC]Cf_H$o]$m:s-I*K6%Ru*BiG@_:OQd-c1cugQB4Go+S>3p>E;F5oQ#.Jn2)<0dj(;A2Ut.AbB-b!^&B-P$S2pHRWph];YlQa8X3c5^4k,HefD)u^fCN;I#i%>>dAaoor]FJ-[0I8<n&-hToFs6(@pnViXs"7;F:FQfMQ'Bkerb<s+r8*LHJ9a*`3\m(f<(7c_=\`YOuPEZF0]gY>M#<TAR??[?VV,\Cg@*,_o[&eF8Ja^0>9,+B&B<#+404mod`?f6r?W^iu_Jh$Wab$4:P=rg;itVBfg,.FbTf^$Rrsb3o>"895neJNQ\`j`X25m7Q4cpJKm/c[<WETId1?D!'eC<-E3&`%WEj8!,Rb<5?TnKUd7EnUl4bK=+s&*L^#T3R+$DB_'E,P/8%\5F9A/A]reEMK:Qq7%\/GOIUk0oELA=J&)^'Fh@cZ6)R"jfK0(%Y?kdo@@BmF<ZNj*J&4L#\54JIL_#/]FAr)V6?L+pLl0FY/(t'Ha@?UF@o!o'Zm#R2U3?e:cepZ`?qTWpZDS2Gah9pJ0oH30R(%-R`LZL[M.J(t9]g]P<VB2g+J!23amn7ka6&8.:R'UIdK/)l:JlsEl,Dafo#OUDS15o.&Q$?U#n+)$\:^')G^4ONA(4F#XFG&-c]2cic)o2Yi>De/Q4>@.#kW3C$)"Sf>CZu&%h).T'8o3Mn>p0Q*)]CLD\IHDhmNtKMjXlL8VAm*S0]lm#J2f9Q,%fEcA#IX8cPKaWjKsuDLRZ6T+-DC&\?uTp,RQ\tO#H)1e*7RZ$$6ck8/"V)>>#Y+G+(C#%g[-?n_:W->?ep,#@HlSkc5/J,3JC"M_#:E+!#`0\@nCpQL)M_jEN&j+;Fo7b<sJE-8I)k!jN27[4NN0AT3Gtm&m)WZtJA&",$=h`3p2O%1,N38']6,q,IkR>Ri*Y3;22HjXdh)kb3hr6T$,D\`0Vg)+*R-W(T'K3H5>UO_`,U2KcRR,`@oS,BDO8mYVt8UCj:G2(^hGW(>ekG0e`^4j.ZOJ4%?Y4%NumURH\7d<!YMa<R:TAP4UrdU`_rCbh6+p;nGS8]pQ2<3rPomo&Rml($ViT3j$:NiN+p?+D[YR``0bGLfL*KZD)_74Yhj"]rCFP)oA%:cHW8lVKt6%IokpPk,@%n@07A8^,/s\B*RElO2k&Y?]0HM`$6n+QikT/_q]XH0ksh(/YZIB=?c3b;TiH^^UppM<b_4JZj5oJMBQ7rBM#5#"qW*W01uob*H..oi+<EaUH(0NuOeDa_Nl2d/tsd:^j?m64H)$$h^6kZ8"[[?+4[M`Hnpjj?"FsL]Fbs*_Y9Kcf+s<SXD1Uh.7V$D-Lqj*;FM,B3=<Lja_(h=MT"l:gRJVrF&m]e6M0^G\E*bV+;dt95B>\jENet\2ni26Z>L)00H*oJ4uLA#K+^3nG%5^)2tF[kI_'IQd19a%4BH?n9d,8F\\LFEIYKb7`F4sQ[49eQGU`Q<dp8<qM&aXUun&hl&*&jpCX.mP[/DMAigHc=f"`sAX,_!C!$#q#%A'H`#Q=`N2#[](K3;<"?Ok4Od-n_XuW*JWe6Y_kE-']OWe]Tm!]ooGNIQ0F\BDs;j=%gkqrh)C4[(cE_u>Fe9$6[V</.QGXN*E_?4QRC73["!Y7GR2ka/mbq8]n[_<CHXI(=6e)DsZ)sH5K(dXm`-9nQ]-&NOmqdMBd.4="3:0ued\\[kO6?ro0GF!/#[!\XJJL2r*[#(XsqFaPtogfJ5=0kU(45=)gd().OVIgLhfe[m:5n:<&%;'E(=B9"U@_5Za8qhjtZ<pdBOGuWUpo<Kp[oP9PMLZV!X7l8+2ehD39-RD<(9/0F[5=a[G(Y&kG"W/HXB8AlH?7R[MZjSPWhs&[TL)<KbsQ2sU,"E;7+&@X>=YM3n-=ZgchJ!b</?mU$Q<*&"a)>DY"e-AJ6.n+P<`,p0,/1Y$%l?W-#E_RP*`bVC8TM!B^\EO7=1eE%nd_tX+3L^#o0JNZ^IdqUo,[q%i)_10$dAHG.Zl#79R]ec-(^c!GFYmKKoKdKd*:&Fqk0;.Sj,QCj.?`9iLb&VWg3<gk8%!"Nd\]"%fo,=%SR9ITaX-,m<e?q4Fppa?]BmV,Z0hCdB:L1$Xcc<2HN+AN(&+['0*4VH(F;?15!:5sl#/:2$l*&BT+PR`2pN0"Nn>7aJ1/pI\HBc>H%rro)E/L]'_1kP`?0J7E4QJ-g-1^j+9LcM/R5bioYC&o`_O60i2D6EkqDPAu(7)kK(eU5-/.r\Usd"BEic%B7H`\NO,Oqm*NFdYMd/)hBW@W$rBd-Y.Y4>01G^L2"h)lg`,]+$@ZX.Jdlj4Z59_)kd^Y63Ni3DuJMOX#@B>DEDk$`k/-X;nHG)HWr*"jCLtR3`31`^H?Y\^i3URMHVc/6JhEn0j,3-Agsu"_?MVH;9IJ4oNp+^5\;()LR'AODJ(n@X22mOY*\ClN[kgHlgYFJLu,CZ_V6tafo+$XP<"e57pNC'd-."k<NFPP=i0cm-U79rOKmA9krm?Y4q\][FO%(7<I?^=\@e:#:Xc@n#:nZid/[GPrF@U.59(+>+6a;*LF3n`jD6JPH?ZRXGIWFZP9$+)btYkdat_k/_<HJo7_c/Udr]m`gK1r*&MTr@)1i$@#$pP@kZ0?\]>pLgd3_*U$hoZ0jM!kp0r@Io6uds7h6X15IS.B%kot.,8QAjD/\9Vs42/iHQL(3u-GK5=A*Aon,HDGoc-2p\c8q)3G<BCY=PWa0i]WbR%IVZPB\KZogPGH5$nZ;?IH/H3J'Hm2a8TA7coJ6sJO,CgT%4fZ7JTME,Seo\$A^[\?fT:-ZR:"LRj,HC%!tEa4W@(MBW($f(!KlCc4$R;@CH,CIl@'*VMF3TX!rEmpCj754F6`5k\5=;mu/?"-&eH$2]Vk?TO'HqRiAcRmR`VD#Cg_oL,,;EL5eXP;bEigB$HUG'Wol2`%ImHAN>V`!U2=hJtGNK'.W#_O-d;_NlBBK9O6UmI<Rkb^Qe/?beagf5OF$br3^iL01G?OgBL'pbh?W\B)qRRcmWlM*rC,KUA&.TB][[/_J]NNPM7d;-RZ:-:f-(JeO25p>^35R*Vk^1MjntXh7%$([`LHt=4.g0h`!b%_@>s#e.;6/I2`Y#"'Hu`E)KXXaj59PecV[<12#csd@E13@]Htp>$l5A+">YrSA([I(;KaDRS!hN\*r3]<#qFhN^9$(oUU1^\.1B5lY6VG<h=!elFVAQP<md!h.o(LXQmca$H(:l<?eA;lE@iTIR7F9+L?aQ0>Bg'IU2Wih)]?S.YrVXTlN$o1<m1O^V\^nS2g0HH8:5V^HZGI_ES?#8:c5OcZ&q!hK'7FNuf1M_\.#0*'Ne?j<AKVL<EfQ,<7!4.YpUT>nAt+K-eX,;Dgg^V&=GH=1W6F]=RM8=8Ld^6=\+4V#LdW"PseO`IF:;^]#'>#kh/FJ-OW:D.))D=BQjr'8E/'C@fVLLmg>8el2-??JYc_M:.Z^p65"sQhGqp"tu+U9X'UE&;5H^0&t"^(6%uSY6#M[:[BD=36:*hHN)DD-FR?)MB)7^H^b+Wq,!83on\l=4`'gUIe1i!fK:tBM)1S]LU5ra1kkH*S?(<['CYE%%`b?tA:0EJp]Hg_Z`=JD(`],,UZ(1=%3NXRd\'+o6hiXS3rbPNk7Vd2qe*k0LWtBp]@#^Fb-q5dO-Hu_P;VofQ3I';F,M&E&_pW,VCF"H3[NOlq?Oe(\YIc(1CjdA^"(V,<-nQ+9+8<i(ns<\V@-uF-0*Os:XA"MIf\lL)h%~>endstream
 endobj
 xref
-0 7
+0 15
 0000000000 65535 f 
-0000000009 00000 n 
-0000000058 00000 n 
-0000000115 00000 n 
-0000000251 00000 n 
-0000000326 00000 n 
-0000000396 00000 n 
+0000000061 00000 n 
+0000000165 00000 n 
+0000000272 00000 n 
+0000000384 00000 n 
+0000000503 00000 n 
+0000000618 00000 n 
+0000000695 00000 n 
+0000000778 00000 n 
+0000000888 00000 n 
+0000001002 00000 n 
+0000001198 00000 n 
+0000001268 00000 n 
+0000001549 00000 n 
+0000001610 00000 n 
 trailer
-<< /Size 7 /Root 1 0 R >>
+<<
+/ID 
+[<d2974c048a5abbf52b75d089509d5473><d2974c048a5abbf52b75d089509d5473>]
+% ReportLab generated PDF document -- digest (opensource)
+
+/Info 12 0 R
+/Root 11 0 R
+/Size 15
+>>
 startxref
-3850
+6057
 %%EOF
